@@ -1,932 +1,656 @@
 <!DOCTYPE html>
-
 <html lang="id">
-
 <head>
-
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1"
-  >
+  <title>Eva Salon - Price List</title>
 
-  <meta
-    name="description"
-    content="Daftar harga dan treatment Eva Salon."
-  >
-
-  <title>
-    Eva Salon - Price List
-  </title>
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <link
-    rel="preconnect"
-    href="https://fonts.googleapis.com"
-  >
-
-  <link
-    rel="preconnect"
-    href="https://fonts.gstatic.com"
-    crossorigin
-  >
-
-  <link
-    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap"
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Cormorant+Garamond:wght@500;600;700&display=swap"
     rel="stylesheet"
   >
-
 
   <style>
 
     :root {
+      --background: #f3f0e9;
+      --surface: #f8f5ef;
+      --surface-dark: #173a34;
 
-      --background:
-        #f7f3ee;
+      --text: #1c2b27;
+      --muted: #6f756f;
 
-      --surface:
-        #fffdfa;
+      --gold: #b79a64;
+      --red: #a85757;
 
-      --mint:
-        #c7dccf;
-
-      --mint-soft:
-        #edf3ef;
-
-      --sage:
-        #7d998a;
-
-      --sage-dark:
-        #586f63;
-
-      --gold:
-        #c6a36c;
-
-      --gold-light:
-        #e5d1ab;
-
-      --text:
-        #342f2a;
-
-      --muted:
-        #827b73;
-
-      --border:
-        rgba(
-          70,
-          62,
-          53,
-          0.10
-        );
+      --line: rgba(28, 43, 39, 0.12);
 
       --shadow:
-        0 14px 40px
-        rgba(
-          66,
-          57,
-          47,
-          0.07
-        );
-
+        0 18px 50px rgba(35, 42, 38, 0.06);
     }
 
 
     * {
-
-      box-sizing:
-        border-box;
-
+      box-sizing: border-box;
     }
 
 
     html {
-
-      scroll-behavior:
-        smooth;
-
+      scroll-behavior: smooth;
     }
 
 
     body {
-
       margin: 0;
 
-      min-height:
-        100vh;
+      background:
+        radial-gradient(
+          circle at top right,
+          rgba(185, 214, 203, 0.17),
+          transparent 30%
+        ),
+        var(--background);
+
+      color: var(--text);
 
       font-family:
         "DM Sans",
         sans-serif;
-
-      background:
-
-        radial-gradient(
-          circle at top right,
-          rgba(
-            199,
-            220,
-            207,
-            0.42
-          ),
-          transparent 30%
-        ),
-
-        var(--background);
-
-      color:
-        var(--text);
-
     }
 
 
     .page {
+      width: min(
+        720px,
+        calc(100% - 32px)
+      );
 
-      width:
-        100%;
-
-      max-width:
-        620px;
-
-      margin:
-        0 auto;
+      margin: 0 auto;
 
       padding:
-        32px
-        18px
-        60px;
-
+        55px 0
+        70px;
     }
 
 
 
-    /*
-    ================================
-    BRAND
-    ================================
-    */
+    /* =====================
+       HEADER
+    ===================== */
 
 
     .brand {
-
-      text-align:
-        center;
-
-      padding:
-        10px 10px 42px;
-
+      margin-bottom: 68px;
     }
 
 
-    .brand-mark {
+    .brand-top {
+      display: flex;
+      align-items: center;
 
-      width:
-        50px;
+      gap: 13px;
 
-      height:
-        50px;
+      margin-bottom: 24px;
 
-      margin:
-        0 auto 17px;
+      color: var(--muted);
 
-      display:
-        flex;
+      font-size: 9px;
+      font-weight: 600;
 
-      align-items:
-        center;
+      letter-spacing: 2.5px;
 
-      justify-content:
-        center;
+      text-transform: uppercase;
+    }
 
-      border:
-        1px solid
-        var(--gold-light);
 
-      border-radius:
-        50%;
+    .brand-top::before {
+      content: "";
 
-      color:
-        var(--gold);
+      width: 36px;
+      height: 1px;
 
-      font-size:
-        18px;
-
+      background: var(--gold);
     }
 
 
     .brand h1 {
-
       margin: 0;
 
       font-family:
-        "Playfair Display",
+        "Cormorant Garamond",
         serif;
 
-      font-weight:
-        500;
+      font-size: clamp(
+        54px,
+        10vw,
+        82px
+      );
 
-      font-size:
-        40px;
+      font-weight: 600;
 
-      letter-spacing:
-        -1.2px;
+      letter-spacing: -2px;
 
-      color:
-        #37312c;
-
+      line-height: 0.9;
     }
 
 
     .brand-description {
+      max-width: 440px;
 
-      max-width:
-        370px;
+      margin-top: 21px;
 
-      margin:
-        12px auto 0;
+      color: var(--muted);
 
-      color:
-        var(--muted);
+      font-size: 14px;
 
-      font-size:
-        14px;
-
-      line-height:
-        1.75;
-
-    }
-
-
-    .brand-line {
-
-      width:
-        40px;
-
-      height:
-        1px;
-
-      margin:
-        24px auto 0;
-
-      background:
-        var(--gold);
-
+      line-height: 1.75;
     }
 
 
 
-    /*
-    ================================
-    INTRO
-    ================================
-    */
+    /* =====================
+       INTRO
+    ===================== */
 
 
     .intro {
+      display: flex;
 
-      margin-bottom:
-        28px;
+      justify-content: space-between;
+      align-items: end;
 
+      gap: 24px;
+
+      margin-bottom: 31px;
     }
 
 
-    .intro-small {
+    .intro-label {
+      display: flex;
+      align-items: center;
 
-      margin-bottom:
-        7px;
+      gap: 11px;
 
-      color:
-        var(--sage);
+      margin-bottom: 9px;
 
-      font-size:
-        11px;
+      color: var(--muted);
 
-      font-weight:
-        600;
+      font-size: 9px;
 
-      letter-spacing:
-        1.7px;
+      font-weight: 600;
 
-      text-transform:
-        uppercase;
+      text-transform: uppercase;
 
+      letter-spacing: 2px;
+    }
+
+
+    .intro-label::before {
+      content: "";
+
+      width: 30px;
+      height: 1px;
+
+      background: var(--gold);
     }
 
 
     .intro h2 {
-
-      margin:
-        0 0 8px;
-
-      font-family:
-        "Playfair Display",
-        serif;
-
-      font-size:
-        27px;
-
-      font-weight:
-        500;
-
-    }
-
-
-    .intro p {
-
       margin: 0;
 
-      color:
-        var(--muted);
+      font-family:
+        "Cormorant Garamond",
+        serif;
 
-      font-size:
-        13px;
+      font-size: 46px;
 
-      line-height:
-        1.6;
+      font-weight: 600;
 
+      line-height: 1;
+    }
+
+
+    .intro-text {
+      max-width: 260px;
+
+      color: var(--muted);
+
+      font-size: 12px;
+
+      line-height: 1.65;
+
+      text-align: right;
     }
 
 
 
-    /*
-    ================================
-    CATEGORY
-    ================================
-    */
+    /* =====================
+       CATEGORY
+    ===================== */
 
 
     .category {
+      margin-bottom: 42px;
 
-      margin-bottom:
-        36px;
+      overflow: hidden;
 
-      overflow:
-        hidden;
+      border:
+        1px solid
+        rgba(28, 43, 39, 0.08);
 
       background:
         var(--surface);
 
-      border:
-        1px solid
-        var(--border);
-
-      border-radius:
-        24px;
-
       box-shadow:
         var(--shadow);
-
     }
 
 
     .category-image-wrapper {
+      position: relative;
 
-      position:
-        relative;
+      height: 265px;
 
-      width:
-        100%;
-
-      height:
-        220px;
-
-      overflow:
-        hidden;
+      overflow: hidden;
 
       background:
-        var(--mint-soft);
-
+        #ddd8ce;
     }
 
 
     .category-image {
+      width: 100%;
+      height: 100%;
 
-      width:
-        100%;
+      object-fit: cover;
 
-      height:
-        100%;
-
-      display:
-        block;
-
-      object-fit:
-        cover;
-
+      display: block;
     }
 
 
     .category-image-wrapper::after {
+      content: "";
 
-      content:
-        "";
+      position: absolute;
 
-      position:
-        absolute;
-
-      inset:
-        0;
+      inset: 0;
 
       background:
-
         linear-gradient(
-
           to top,
-
-          rgba(
-            30,
-            29,
-            26,
-            0.68
-          )
-          0%,
-
-          rgba(
-            30,
-            29,
-            26,
-            0.06
-          )
-          60%,
-
-          transparent
-          100%
-
+          rgba(12, 28, 24, 0.72),
+          rgba(12, 28, 24, 0.04) 65%
         );
-
     }
 
 
     .category-heading {
+      position: absolute;
 
-      position:
-        absolute;
+      z-index: 2;
 
-      z-index:
-        2;
+      left: 27px;
+      right: 27px;
+      bottom: 24px;
 
-      left:
-        22px;
-
-      right:
-        22px;
-
-      bottom:
-        20px;
-
-      color:
-        white;
-
+      color: white;
     }
 
 
-    .category-label {
+    .category-number {
+      margin-bottom: 8px;
 
-      margin-bottom:
-        5px;
+      color:
+        rgba(
+          255,
+          255,
+          255,
+          0.65
+        );
 
-      font-size:
-        10px;
+      font-size: 9px;
 
-      font-weight:
-        600;
-
-      letter-spacing:
-        1.5px;
-
-      text-transform:
-        uppercase;
-
-      opacity:
-        0.82;
-
+      letter-spacing: 2px;
     }
 
 
     .category-title {
-
       margin: 0;
 
       font-family:
-        "Playfair Display",
+        "Cormorant Garamond",
         serif;
 
-      font-size:
-        28px;
+      font-size: 40px;
 
-      font-weight:
-        500;
+      font-weight: 600;
 
-      line-height:
-        1.15;
-
+      line-height: 1;
     }
 
 
     .category-no-image {
-
       padding:
-        27px 22px 17px;
+        33px
+        28px
+        27px;
 
       background:
+        var(--surface-dark);
 
-        linear-gradient(
-          135deg,
-          var(--mint-soft),
-          #f8f4ed
-        );
-
-    }
-
-
-    .category-no-image
-    .category-label {
-
-      color:
-        var(--sage);
-
-      opacity:
-        1;
-
+      color: white;
     }
 
 
     .category-no-image
     .category-title {
-
-      color:
-        var(--text);
-
+      color: white;
     }
 
 
 
-    /*
-    ================================
-    SERVICES
-    ================================
-    */
+    /* =====================
+       SERVICES
+    ===================== */
 
 
     .services {
-
       padding:
-        5px 22px;
-
+        5px
+        27px;
     }
 
 
     .service {
+      display: grid;
 
-      display:
-        flex;
+      grid-template-columns:
+        1fr
+        auto;
 
-      justify-content:
-        space-between;
+      gap: 25px;
 
-      align-items:
-        center;
-
-      gap:
-        22px;
+      align-items: center;
 
       padding:
-        20px 0;
+        21px 0;
 
       border-bottom:
         1px solid
-        var(--border);
-
+        var(--line);
     }
 
 
     .service:last-child {
-
-      border-bottom:
-        none;
-
-    }
-
-
-    .service-info {
-
-      min-width: 0;
-
+      border-bottom: none;
     }
 
 
     .service-name {
-
       font-family:
-        "Playfair Display",
+        "Cormorant Garamond",
         serif;
 
-      font-size:
-        17px;
+      font-size: 23px;
 
-      font-weight:
-        500;
+      font-weight: 600;
 
-      line-height:
-        1.3;
-
+      line-height: 1.15;
     }
 
 
     .service-note {
+      display: block;
 
-      display:
-        block;
+      max-width: 390px;
 
-      margin-top:
-        5px;
+      margin-top: 5px;
 
-      color:
-        var(--muted);
+      color: var(--muted);
 
-      font-family:
-        "DM Sans",
-        sans-serif;
+      font-size: 10px;
 
-      font-size:
-        11px;
-
-      line-height:
-        1.4;
-
+      line-height: 1.55;
     }
 
 
     .service-price {
+      text-align: right;
 
-      flex-shrink: 0;
+      color: var(--text);
 
-      color:
-        var(--gold);
+      font-size: 13px;
 
-      font-size:
-        14px;
+      font-weight: 600;
 
-      font-weight:
-        600;
+      white-space: nowrap;
+    }
 
-      white-space:
-        nowrap;
 
+    .service-price::after {
+      content: " —";
+
+      margin-left: 5px;
+
+      color: var(--red);
     }
 
 
 
-    /*
-    ================================
-    LOADING
-    ================================
-    */
+    /* =====================
+       LOADING / ERROR
+    ===================== */
 
 
     .loading {
-
       padding:
-        60px 20px;
+        60px
+        20px;
 
-      text-align:
-        center;
+      text-align: center;
 
-      color:
-        var(--muted);
+      color: var(--muted);
 
-      font-size:
-        13px;
-
+      font-size: 12px;
     }
 
 
-    .loading-dot {
-
-      width:
-        38px;
-
-      height:
-        38px;
+    .loader {
+      width: 35px;
+      height: 35px;
 
       margin:
-        0 auto 16px;
+        0 auto
+        15px;
 
       border:
-        2px solid
-        var(--mint);
+        1px solid
+        rgba(183, 154, 100, 0.25);
 
       border-top-color:
         var(--gold);
 
-      border-radius:
-        50%;
+      border-radius: 50%;
 
       animation:
-        spin 0.8s linear infinite;
-
+        spin .8s linear infinite;
     }
 
 
     @keyframes spin {
-
       to {
-
         transform:
           rotate(360deg);
-
       }
-
     }
-
-
-
-    /*
-    ================================
-    ERROR
-    ================================
-    */
 
 
     .error {
-
-      padding:
-        20px;
+      padding: 20px;
 
       border:
         1px solid
-        #ecd1d1;
-
-      border-radius:
-        17px;
+        #ead3d3;
 
       background:
-        #fff3f3;
+        #fff2f2;
 
       color:
-        #865c5c;
+        #865e5e;
 
-      font-size:
-        13px;
-
-      line-height:
-        1.6;
-
+      font-size: 12px;
     }
 
 
 
-    /*
-    ================================
-    FOOTER
-    ================================
-    */
+    /* =====================
+       FOOTER
+    ===================== */
 
 
     footer {
+      padding-top: 17px;
 
-      margin-top:
-        48px;
+      border-top:
+        1px solid
+        var(--line);
 
-      padding:
-        0 15px;
+      color: var(--muted);
 
-      text-align:
-        center;
+      font-size: 10px;
 
-      color:
-        var(--muted);
-
-      font-size:
-        11px;
-
-      line-height:
-        1.8;
-
+      line-height: 1.7;
     }
 
 
     footer strong {
+      color: var(--text);
 
-      color:
-        var(--gold);
-
-      font-weight:
-        500;
-
+      font-weight: 500;
     }
 
 
 
-    /*
-    ================================
-    MOBILE
-    ================================
-    */
+    /* =====================
+       MOBILE
+    ===================== */
 
 
     @media
-    (max-width: 480px) {
-
+    (max-width: 600px) {
 
       .page {
+        width:
+          calc(
+            100% - 26px
+          );
 
-        padding:
-          27px
-          15px
-          50px;
-
+        padding-top:
+          37px;
       }
 
 
       .brand {
-
-        padding-bottom:
-          38px;
-
+        margin-bottom:
+          53px;
       }
 
 
       .brand h1 {
+        font-size:
+          59px;
+      }
+
+
+      .brand-description {
+        max-width:
+          330px;
 
         font-size:
-          37px;
+          13px;
+      }
 
+
+      .intro {
+        display: block;
+
+        margin-bottom:
+          24px;
       }
 
 
       .intro h2 {
-
         font-size:
-          25px;
+          39px;
+      }
 
+
+      .intro-text {
+        margin-top:
+          12px;
+
+        max-width:
+          330px;
+
+        text-align:
+          left;
       }
 
 
       .category {
-
-        border-radius:
-          21px;
-
+        margin-bottom:
+          29px;
       }
 
 
       .category-image-wrapper {
-
         height:
-          190px;
-
+          205px;
       }
 
 
       .category-heading {
-
         left:
-          19px;
+          20px;
 
         bottom:
-          18px;
-
+          19px;
       }
 
 
       .category-title {
-
         font-size:
-          26px;
-
+          34px;
       }
 
 
       .services {
-
         padding:
-          4px 18px;
-
+          4px 19px;
       }
 
 
       .service {
-
         padding:
           18px 0;
 
+        gap: 15px;
       }
 
 
       .service-name {
-
         font-size:
-          16px;
-
+          21px;
       }
 
 
       .service-price {
-
         font-size:
-          13px;
-
+          12px;
       }
 
     }
@@ -936,37 +660,26 @@
 </head>
 
 
-
 <body>
-
 
   <main class="page">
 
 
     <header class="brand">
 
-
-      <div class="brand-mark">
-        ✦
+      <div class="brand-top">
+        Hair & Skin Care · Bekasi
       </div>
-
 
       <h1>
         Eva Salon
       </h1>
 
-
       <p class="brand-description">
-
-        Perawatan untuk kecantikan,
-        kenyamanan, dan kepercayaan
-        diri Anda.
-
+        Daftar perawatan rambut dan kecantikan
+        Eva Salon. Pilih treatment yang sesuai
+        dengan kebutuhan Anda.
       </p>
-
-
-      <div class="brand-line"></div>
-
 
     </header>
 
@@ -974,24 +687,24 @@
 
     <section class="intro">
 
+      <div>
 
-      <div class="intro-small">
-        Price List
+        <div class="intro-label">
+          Price List
+        </div>
+
+        <h2>
+          Layanan Kami
+        </h2>
+
       </div>
 
 
-      <h2>
-        Our Treatments
-      </h2>
-
-
-      <p>
-
-        Temukan perawatan yang sesuai
-        untuk kebutuhan Anda.
-
+      <p class="intro-text">
+        Harga layanan dapat berbeda
+        menyesuaikan kebutuhan dan
+        kondisi rambut.
       </p>
-
 
     </section>
 
@@ -999,15 +712,13 @@
 
     <div id="content">
 
-
       <div class="loading">
 
-        <div class="loading-dot"></div>
+        <div class="loader"></div>
 
         Memuat daftar layanan...
 
       </div>
-
 
     </div>
 
@@ -1015,8 +726,7 @@
 
     <footer>
 
-      Harga dapat berubah
-      sewaktu-waktu.
+      Harga dapat berubah sewaktu-waktu.
 
       <br>
 
@@ -1032,234 +742,442 @@
 
 
   <script>
-  const API_URL =
-    'https://script.google.com/macros/s/AKfycbwRcpPFRXnySce9fhF7-FZEzJ85PuA6jiGU0SOmYIP8a12PR1XGUylHLuGGdhq3GrPF/exec';
+
+    /*
+    ======================================
+    GANTI DENGAN URL APPS SCRIPT KAMU
+    ======================================
+    */
+
+    const API_URL =
+      'PASTE_URL_APPS_SCRIPT_EXEC_DI_SINI';
 
 
-  function formatRupiah(number) {
-    return new Intl.NumberFormat('id-ID', {
-      style: 'currency',
-      currency: 'IDR',
-      maximumFractionDigits: 0
-    }).format(number);
-  }
+
+    function formatRupiah(number) {
+
+      return new Intl.NumberFormat(
+        'id-ID',
+        {
+          style:
+            'currency',
+
+          currency:
+            'IDR',
+
+          maximumFractionDigits:
+            0
+        }
+      ).format(number);
+
+    }
 
 
-  function escapeHTML(value) {
-    const div = document.createElement('div');
 
-    div.textContent =
-      value == null
-        ? ''
-        : String(value);
+    function escapeHTML(value) {
 
-    return div.innerHTML;
-  }
+      const div =
+        document.createElement(
+          'div'
+        );
+
+      div.textContent =
+        value == null
+          ? ''
+          : String(value);
+
+      return div.innerHTML;
+
+    }
 
 
-  function loadEvaSalonData(response) {
-    console.log('DATA MASUK:', response);
 
-    if (
-      !response ||
-      response.success !== true
-    ) {
-      showError(
-        response?.message ||
-        'Data tidak tersedia.'
+    function loadEvaSalonData(response) {
+
+      console.log(
+        'DATA MASUK:',
+        response
       );
 
-      return;
-    }
 
-    renderPriceList(response.data);
-  }
+      if (
+        !response ||
+        response.success !== true
+      ) {
 
+        showError(
+          response?.message ||
+          'Data tidak tersedia.'
+        );
 
-  function renderPriceList(categories) {
-    const container =
-      document.getElementById('content');
+        return;
 
-
-    if (
-      !categories ||
-      categories.length === 0
-    ) {
-      container.innerHTML = `
-        <div class="error">
-          Belum ada layanan yang tersedia.
-        </div>
-      `;
-
-      return;
-    }
-
-
-    let html = '';
-
-
-    categories.forEach(category => {
-      html += `
-        <section class="category">
-      `;
-
-
-      if (category.image) {
-        html += `
-          <div class="category-image-wrapper">
-
-            <img
-              class="category-image"
-              src="${escapeHTML(category.image)}"
-              alt="${escapeHTML(category.name)}"
-              loading="lazy"
-            >
-
-            <div class="category-heading">
-
-              <div class="category-label">
-                Treatment
-              </div>
-
-              <h3 class="category-title">
-                ${escapeHTML(category.name)}
-              </h3>
-
-            </div>
-
-          </div>
-        `;
-      }
-
-      else {
-        html += `
-          <div class="category-no-image">
-
-            <div class="category-label">
-              Treatment
-            </div>
-
-            <h3 class="category-title">
-              ${escapeHTML(category.name)}
-            </h3>
-
-          </div>
-        `;
       }
 
 
-      html += `
-        <div class="services">
-      `;
+      renderPriceList(
+        response.data
+      );
+
+    }
 
 
-      category.services.forEach(service => {
-        html += `
-          <div class="service">
 
-            <div class="service-info">
+    function renderPriceList(categories) {
 
-              <div class="service-name">
-                ${escapeHTML(service.service)}
+      const container =
+        document.getElementById(
+          'content'
+        );
+
+
+      if (
+        !categories ||
+        categories.length === 0
+      ) {
+
+        container.innerHTML = `
+
+          <div class="error">
+
+            Belum ada layanan
+            yang tersedia.
+
+          </div>
+
+        `;
+
+        return;
+
+      }
+
+
+      let html = '';
+
+
+      categories.forEach(
+        (category, index) => {
+
+
+          html += `
+
+            <section class="category">
+
+          `;
+
+
+
+          if (category.image) {
+
+            html += `
+
+              <div
+                class="category-image-wrapper"
+              >
+
+                <img
+
+                  class="category-image"
+
+                  src="${
+                    escapeHTML(
+                      category.image
+                    )
+                  }"
+
+                  alt="${
+                    escapeHTML(
+                      category.name
+                    )
+                  }"
+
+                  loading="lazy"
+
+                >
+
+
+                <div
+                  class="category-heading"
+                >
+
+                  <div
+                    class="category-number"
+                  >
+                    ${
+                      String(
+                        index + 1
+                      )
+                      .padStart(
+                        2,
+                        '0'
+                      )
+                    }
+                  </div>
+
+
+                  <h3
+                    class="category-title"
+                  >
+
+                    ${
+                      escapeHTML(
+                        category.name
+                      )
+                    }
+
+                  </h3>
+
+                </div>
+
+
               </div>
 
-              ${
-                service.note
-                  ? `
-                    <span class="service-note">
-                      ${escapeHTML(service.note)}
-                    </span>
-                  `
-                  : ''
-              }
+            `;
 
-            </div>
+          }
 
 
-            <div class="service-price">
-              ${formatRupiah(service.price)}
-            </div>
+          else {
+
+            html += `
+
+              <div
+                class="category-no-image"
+              >
+
+                <div
+                  class="category-number"
+                >
+                  ${
+                    String(
+                      index + 1
+                    )
+                    .padStart(
+                      2,
+                      '0'
+                    )
+                  }
+                </div>
+
+
+                <h3
+                  class="category-title"
+                >
+
+                  ${
+                    escapeHTML(
+                      category.name
+                    )
+                  }
+
+                </h3>
+
+
+              </div>
+
+            `;
+
+          }
+
+
+
+          html += `
+
+            <div class="services">
+
+          `;
+
+
+
+          category.services
+            .forEach(service => {
+
+
+              html += `
+
+                <div class="service">
+
+
+                  <div>
+
+                    <div
+                      class="service-name"
+                    >
+
+                      ${
+                        escapeHTML(
+                          service.service
+                        )
+                      }
+
+                    </div>
+
+
+                    ${
+                      service.note
+                      ?
+
+                      `
+
+                        <span
+                          class="service-note"
+                        >
+
+                          ${
+                            escapeHTML(
+                              service.note
+                            )
+                          }
+
+                        </span>
+
+                      `
+
+                      :
+
+                      ''
+                    }
+
+                  </div>
+
+
+
+                  <div
+                    class="service-price"
+                  >
+
+                    ${
+                      formatRupiah(
+                        service.price
+                      )
+                    }
+
+                  </div>
+
+
+                </div>
+
+              `;
+
+
+            });
+
+
+
+          html += `
+
+              </div>
+
+            </section>
+
+          `;
+
+
+        });
+
+
+
+      container.innerHTML =
+        html;
+
+    }
+
+
+
+    function showError(message) {
+
+      console.error(
+        message
+      );
+
+
+      document
+        .getElementById(
+          'content'
+        )
+        .innerHTML = `
+
+          <div class="error">
+
+            Price list gagal dimuat.
+
+            <br><br>
+
+            Silakan coba kembali.
 
           </div>
+
         `;
-      });
+
+    }
 
 
-      html += `
-          </div>
-        </section>
-      `;
-    });
+
+    function loadData() {
+
+      if (
+        API_URL ===
+        'https://script.google.com/macros/s/AKfycbwRcpPFRXnySce9fhF7-FZEzJ85PuA6jiGU0SOmYIP8a12PR1XGUylHLuGGdhq3GrPF/exec'
+      ) {
+
+        showError(
+          'API URL belum diisi.'
+        );
+
+        return;
+
+      }
 
 
-    container.innerHTML = html;
-  }
+      const script =
+        document.createElement(
+          'script'
+        );
 
 
-  function showError(message) {
-    console.error('ERROR:', message);
-
-    document.getElementById('content')
-      .innerHTML = `
-        <div class="error">
-          Price list gagal dimuat.
-          <br><br>
-          Silakan coba kembali.
-        </div>
-      `;
-  }
+      const separator =
+        API_URL.includes('?')
+          ? '&'
+          : '?';
 
 
-  function loadData() {
-    const callbackName =
-      'loadEvaSalonData';
-
-    const script =
-      document.createElement('script');
-
-    const separator =
-      API_URL.includes('?')
-        ? '&'
-        : '?';
-
-    script.src =
-      API_URL +
-      separator +
-      'callback=' +
-      callbackName +
-      '&t=' +
-      Date.now();
+      script.src =
+        API_URL +
+        separator +
+        'callback=loadEvaSalonData' +
+        '&t=' +
+        Date.now();
 
 
-    console.log(
-      'Loading API:',
-      script.src
+      script.onerror =
+        function () {
+
+          showError(
+            'Gagal terhubung ke server.'
+          );
+
+        };
+
+
+      document.body.appendChild(
+        script
+      );
+
+    }
+
+
+
+    window.loadEvaSalonData =
+      loadEvaSalonData;
+
+
+    window.addEventListener(
+      'DOMContentLoaded',
+      loadData
     );
 
-
-    script.onerror =
-      function () {
-        showError(
-          'Gagal terhubung ke Apps Script.'
-        );
-      };
-
-
-    document.body.appendChild(script);
-  }
-
-
-  window.loadEvaSalonData =
-    loadEvaSalonData;
-
-
-  window.addEventListener(
-    'DOMContentLoaded',
-    loadData
-  );
-</script>
+  </script>
 
 
 </body>
-
 </html>
