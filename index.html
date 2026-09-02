@@ -1032,501 +1032,232 @@
 
 
   <script>
+  const API_URL =
+    'https://script.google.com/macros/s/AKfycbwRcpPFRXnySce9fhF7-FZEzJ85PuA6jiGU0SOmYIP8a12PR1XGUylHLuGGdhq3GrPF/exec';
 
 
-    /*
-    =====================================
-    APPS SCRIPT URL
-
-    GANTI INI DENGAN URL /exec KAMU
-    =====================================
-    */
-
-
-    const API_URL =
-      'https://script.google.com/macros/s/AKfycbwRcpPFRXnySce9fhF7-FZEzJ85PuA6jiGU0SOmYIP8a12PR1XGUylHLuGGdhq3GrPF/exec';
+  function formatRupiah(number) {
+    return new Intl.NumberFormat('id-ID', {
+      style: 'currency',
+      currency: 'IDR',
+      maximumFractionDigits: 0
+    }).format(number);
+  }
 
 
+  function escapeHTML(value) {
+    const div = document.createElement('div');
 
-    /*
-    =====================================
-    FORMAT RUPIAH
-    =====================================
-    */
+    div.textContent =
+      value == null
+        ? ''
+        : String(value);
 
-
-    function formatRupiah(number) {
-
-      return new Intl.NumberFormat(
-
-        'id-ID',
-
-        {
-
-          style:
-            'currency',
-
-          currency:
-            'IDR',
-
-          maximumFractionDigits:
-            0
-
-        }
-
-      ).format(number);
-
-    }
+    return div.innerHTML;
+  }
 
 
+  function loadEvaSalonData(response) {
+    console.log('DATA MASUK:', response);
 
-    /*
-    =====================================
-    HTML SECURITY
-    =====================================
-    */
-
-
-    function escapeHTML(value) {
-
-      const div =
-        document.createElement(
-          'div'
-        );
-
-      div.textContent =
-        value == null
-          ? ''
-          : String(value);
-
-      return div.innerHTML;
-
-    }
-
-
-
-    /*
-    =====================================
-    CALLBACK DARI GOOGLE APPS SCRIPT
-    =====================================
-    */
-
-
-    function loadEvaSalonData(response) {
-
-
-      if (
-        !response ||
-        response.success !== true
-      ) {
-
-        showError(
-          response &&
-          response.message
-            ? response.message
-            : 'Data tidak tersedia.'
-        );
-
-        return;
-
-      }
-
-
-      renderPriceList(
-        response.data
+    if (
+      !response ||
+      response.success !== true
+    ) {
+      showError(
+        response?.message ||
+        'Data tidak tersedia.'
       );
 
+      return;
+    }
+
+    renderPriceList(response.data);
+  }
+
+
+  function renderPriceList(categories) {
+    const container =
+      document.getElementById('content');
+
+
+    if (
+      !categories ||
+      categories.length === 0
+    ) {
+      container.innerHTML = `
+        <div class="error">
+          Belum ada layanan yang tersedia.
+        </div>
+      `;
+
+      return;
     }
 
 
-
-    /*
-    =====================================
-    RENDER PRICE LIST
-    =====================================
-    */
+    let html = '';
 
 
-    function renderPriceList(categories) {
+    categories.forEach(category => {
+      html += `
+        <section class="category">
+      `;
 
 
-      const container =
-        document.getElementById(
-          'content'
-        );
+      if (category.image) {
+        html += `
+          <div class="category-image-wrapper">
 
+            <img
+              class="category-image"
+              src="${escapeHTML(category.image)}"
+              alt="${escapeHTML(category.name)}"
+              loading="lazy"
+            >
 
-      if (
-        !categories ||
-        categories.length === 0
-      ) {
+            <div class="category-heading">
 
-        container.innerHTML = `
+              <div class="category-label">
+                Treatment
+              </div>
 
-          <div class="error">
+              <h3 class="category-title">
+                ${escapeHTML(category.name)}
+              </h3>
 
-            Belum ada layanan
-            yang tersedia.
+            </div>
 
           </div>
-
         `;
+      }
 
-        return;
+      else {
+        html += `
+          <div class="category-no-image">
 
+            <div class="category-label">
+              Treatment
+            </div>
+
+            <h3 class="category-title">
+              ${escapeHTML(category.name)}
+            </h3>
+
+          </div>
+        `;
       }
 
 
-
-      let html = '';
-
-
-
-      categories
-        .forEach(category => {
+      html += `
+        <div class="services">
+      `;
 
 
-          html += `
+      category.services.forEach(service => {
+        html += `
+          <div class="service">
 
-            <section class="category">
+            <div class="service-info">
 
-          `;
-
-
-
-          /*
-          IMAGE
-          */
-
-
-          if (category.image) {
-
-
-            html += `
-
-              <div
-                class="category-image-wrapper"
-              >
-
-
-                <img
-
-                  class="category-image"
-
-                  src="${
-                    escapeHTML(
-                      category.image
-                    )
-                  }"
-
-                  alt="${
-                    escapeHTML(
-                      category.name
-                    )
-                  }"
-
-                  loading="lazy"
-
-                >
-
-
-                <div
-                  class="category-heading"
-                >
-
-
-                  <div
-                    class="category-label"
-                  >
-
-                    Treatment
-
-                  </div>
-
-
-                  <h3
-                    class="category-title"
-                  >
-
-                    ${
-                      escapeHTML(
-                        category.name
-                      )
-                    }
-
-                  </h3>
-
-
-                </div>
-
-
+              <div class="service-name">
+                ${escapeHTML(service.service)}
               </div>
 
-            `;
-
-
-          }
-
-
-          else {
-
-
-            html += `
-
-              <div
-                class="category-no-image"
-              >
-
-
-                <div
-                  class="category-label"
-                >
-
-                  Treatment
-
-                </div>
-
-
-                <h3
-                  class="category-title"
-                >
-
-                  ${
-                    escapeHTML(
-                      category.name
-                    )
-                  }
-
-                </h3>
-
-
-              </div>
-
-            `;
-
-
-          }
-
-
-
-          /*
-          SERVICES
-          */
-
-
-          html += `
-
-            <div class="services">
-
-          `;
-
-
-
-          category.services
-            .forEach(service => {
-
-
-              html += `
-
-                <div class="service">
-
-
-                  <div
-                    class="service-info"
-                  >
-
-
-                    <div
-                      class="service-name"
-                    >
-
-                      ${
-                        escapeHTML(
-                          service.service
-                        )
-                      }
-
-                    </div>
-
-
-                    ${
-                      service.note
-                      ?
-
-                      `
-
-                        <span
-                          class="service-note"
-                        >
-
-                          ${
-                            escapeHTML(
-                              service.note
-                            )
-                          }
-
-                        </span>
-
-                      `
-
-                      :
-
-                      ''
-                    }
-
-
-                  </div>
-
-
-
-                  <div
-                    class="service-price"
-                  >
-
-                    ${
-                      formatRupiah(
-                        service.price
-                      )
-                    }
-
-                  </div>
-
-
-                </div>
-
-              `;
-
-
-            });
-
-
-
-          html += `
-
-              </div>
-
-            </section>
-
-          `;
-
-
-        });
-
-
-
-      container.innerHTML =
-        html;
-
-    }
-
-
-
-    /*
-    =====================================
-    ERROR
-    =====================================
-    */
-
-
-    function showError(message) {
-
-
-      console.error(
-        message
-      );
-
-
-      document
-        .getElementById(
-          'content'
-        )
-        .innerHTML = `
-
-          <div class="error">
-
-            Price list gagal dimuat.
-
-            <br><br>
-
-            Silakan coba kembali.
+              ${
+                service.note
+                  ? `
+                    <span class="service-note">
+                      ${escapeHTML(service.note)}
+                    </span>
+                  `
+                  : ''
+              }
+
+            </div>
+
+
+            <div class="service-price">
+              ${formatRupiah(service.price)}
+            </div>
 
           </div>
-
         `;
-
-    }
-
+      });
 
 
-    /*
-    =====================================
-    LOAD API VIA JSONP
-    =====================================
-    */
+      html += `
+          </div>
+        </section>
+      `;
+    });
 
 
-    function loadData() {
+    container.innerHTML = html;
+  }
 
 
-      if (
-        API_URL ===
-        'https://script.google.com/macros/s/AKfycbwRcpPFRXnySce9fhF7-FZEzJ85PuA6jiGU0SOmYIP8a12PR1XGUylHLuGGdhq3GrPF/exec'
-      ) {
+  function showError(message) {
+    console.error('ERROR:', message);
 
+    document.getElementById('content')
+      .innerHTML = `
+        <div class="error">
+          Price list gagal dimuat.
+          <br><br>
+          Silakan coba kembali.
+        </div>
+      `;
+  }
+
+
+  function loadData() {
+    const callbackName =
+      'loadEvaSalonData';
+
+    const script =
+      document.createElement('script');
+
+    const separator =
+      API_URL.includes('?')
+        ? '&'
+        : '?';
+
+    script.src =
+      API_URL +
+      separator +
+      'callback=' +
+      callbackName +
+      '&t=' +
+      Date.now();
+
+
+    console.log(
+      'Loading API:',
+      script.src
+    );
+
+
+    script.onerror =
+      function () {
         showError(
-          'API URL belum diisi.'
+          'Gagal terhubung ke Apps Script.'
         );
-
-        return;
-
-      }
+      };
 
 
-      const script =
-        document.createElement(
-          'script'
-        );
+    document.body.appendChild(script);
+  }
 
 
-      script.src =
-
-        API_URL +
-
-        '?callback=' +
-
-        encodeURIComponent(
-          'loadEvaSalonData'
-        ) +
-
-        '&t=' +
-
-        Date.now();
+  window.loadEvaSalonData =
+    loadEvaSalonData;
 
 
-
-      script.onerror =
-        function () {
-
-          showError(
-            'Gagal terhubung ke server.'
-          );
-
-        };
-
-
-      document.body
-        .appendChild(
-          script
-        );
-
-    }
-
-
-
-    loadData();
-
-
-  </script>
+  window.addEventListener(
+    'DOMContentLoaded',
+    loadData
+  );
+</script>
 
 
 </body>
