@@ -1,467 +1,1043 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
+
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Eva Salon - Price List</title>
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  >
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta
+    name="description"
+    content="Daftar harga layanan Eva Salon Hair & Skin Care Bekasi."
+  >
+
+  <title>
+    Eva Salon - Price List
+  </title>
+
+
+  <!-- GOOGLE FONT -->
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
 
   <link
     href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Cormorant+Garamond:wght@500;600;700&display=swap"
     rel="stylesheet"
   >
 
+
   <style>
 
     :root {
-      --background: #f3f0e9;
-      --surface: #f8f5ef;
-      --surface-dark: #173a34;
 
-      --text: #1c2b27;
-      --muted: #6f756f;
+      --background:
+        #f3f0e9;
 
-      --gold: #b79a64;
-      --red: #a85757;
+      --surface:
+        #f8f5ef;
 
-      --line: rgba(28, 43, 39, 0.12);
+      --surface-dark:
+        #173a34;
+
+      --text:
+        #1c2b27;
+
+      --muted:
+        #6f756f;
+
+      --gold:
+        #b79a64;
+
+      --red:
+        #a85757;
+
+      --line:
+        rgba(
+          28,
+          43,
+          39,
+          0.12
+        );
 
       --shadow:
-        0 18px 50px rgba(35, 42, 38, 0.06);
+        0 18px 50px
+        rgba(
+          35,
+          42,
+          38,
+          0.06
+        );
+
     }
 
 
+
+    /*
+    ========================================
+    RESET
+    ========================================
+    */
+
     * {
-      box-sizing: border-box;
+      box-sizing:
+        border-box;
     }
 
 
     html {
-      scroll-behavior: smooth;
+      scroll-behavior:
+        smooth;
     }
 
 
     body {
+
       margin: 0;
 
+      min-height:
+        100vh;
+
       background:
+
         radial-gradient(
           circle at top right,
-          rgba(185, 214, 203, 0.17),
+          rgba(
+            185,
+            214,
+            203,
+            0.17
+          ),
           transparent 30%
         ),
+
         var(--background);
 
-      color: var(--text);
+      color:
+        var(--text);
 
       font-family:
         "DM Sans",
         sans-serif;
+
     }
 
 
-    .page {
-      width: min(
-        720px,
-        calc(100% - 32px)
-      );
 
-      margin: 0 auto;
+    /*
+    ========================================
+    PAGE
+    ========================================
+    */
+
+    .page {
+
+      width:
+        min(
+          720px,
+          calc(100% - 32px)
+        );
+
+      margin:
+        0 auto;
 
       padding:
         55px 0
         70px;
+
     }
 
 
 
-    /* =====================
-       HEADER
-    ===================== */
-
+    /*
+    ========================================
+    BRAND
+    ========================================
+    */
 
     .brand {
-      margin-bottom: 68px;
+
+      margin-bottom:
+        68px;
+
     }
 
 
     .brand-top {
-      display: flex;
-      align-items: center;
 
-      gap: 13px;
+      display:
+        flex;
 
-      margin-bottom: 24px;
+      align-items:
+        center;
 
-      color: var(--muted);
+      gap:
+        13px;
 
-      font-size: 9px;
-      font-weight: 600;
+      margin-bottom:
+        24px;
 
-      letter-spacing: 2.5px;
+      color:
+        var(--muted);
 
-      text-transform: uppercase;
+      font-size:
+        9px;
+
+      font-weight:
+        600;
+
+      letter-spacing:
+        2.5px;
+
+      text-transform:
+        uppercase;
+
     }
 
 
     .brand-top::before {
-      content: "";
 
-      width: 36px;
-      height: 1px;
+      content:
+        "";
 
-      background: var(--gold);
+      width:
+        36px;
+
+      height:
+        1px;
+
+      flex-shrink:
+        0;
+
+      background:
+        var(--gold);
+
     }
 
 
     .brand h1 {
+
       margin: 0;
 
       font-family:
         "Cormorant Garamond",
         serif;
 
-      font-size: clamp(
-        54px,
-        10vw,
-        82px
-      );
+      font-size:
+        clamp(
+          54px,
+          10vw,
+          82px
+        );
 
-      font-weight: 600;
+      font-weight:
+        600;
 
-      letter-spacing: -2px;
+      letter-spacing:
+        -2px;
 
-      line-height: 0.9;
+      line-height:
+        0.9;
+
     }
 
 
     .brand-description {
-      max-width: 440px;
 
-      margin-top: 21px;
+      max-width:
+        460px;
 
-      color: var(--muted);
+      margin-top:
+        22px;
 
-      font-size: 14px;
+      color:
+        var(--muted);
 
-      line-height: 1.75;
+      font-size:
+        14px;
+
+      line-height:
+        1.75;
+
     }
 
 
 
-    /* =====================
-       INTRO
-    ===================== */
-
+    /*
+    ========================================
+    INTRO
+    ========================================
+    */
 
     .intro {
-      display: flex;
 
-      justify-content: space-between;
-      align-items: end;
+      display:
+        flex;
 
-      gap: 24px;
+      justify-content:
+        space-between;
 
-      margin-bottom: 31px;
+      align-items:
+        end;
+
+      gap:
+        24px;
+
+      margin-bottom:
+        31px;
+
     }
 
 
     .intro-label {
-      display: flex;
-      align-items: center;
 
-      gap: 11px;
+      display:
+        flex;
 
-      margin-bottom: 9px;
+      align-items:
+        center;
 
-      color: var(--muted);
+      gap:
+        11px;
 
-      font-size: 9px;
+      margin-bottom:
+        9px;
 
-      font-weight: 600;
+      color:
+        var(--muted);
 
-      text-transform: uppercase;
+      font-size:
+        9px;
 
-      letter-spacing: 2px;
+      font-weight:
+        600;
+
+      text-transform:
+        uppercase;
+
+      letter-spacing:
+        2px;
+
     }
 
 
     .intro-label::before {
-      content: "";
 
-      width: 30px;
-      height: 1px;
+      content:
+        "";
 
-      background: var(--gold);
+      width:
+        30px;
+
+      height:
+        1px;
+
+      flex-shrink:
+        0;
+
+      background:
+        var(--gold);
+
     }
 
 
     .intro h2 {
+
       margin: 0;
 
       font-family:
         "Cormorant Garamond",
         serif;
 
-      font-size: 46px;
+      font-size:
+        46px;
 
-      font-weight: 600;
+      font-weight:
+        600;
 
-      line-height: 1;
+      line-height:
+        1;
+
     }
 
 
     .intro-text {
-      max-width: 260px;
 
-      color: var(--muted);
+      max-width:
+        270px;
 
-      font-size: 12px;
+      color:
+        var(--muted);
 
-      line-height: 1.65;
+      font-size:
+        12px;
 
-      text-align: right;
+      line-height:
+        1.65;
+
+      text-align:
+        right;
+
     }
 
 
 
-    /* =====================
-       CATEGORY
-    ===================== */
-
+    /*
+    ========================================
+    CATEGORY
+    ========================================
+    */
 
     .category {
-      margin-bottom: 42px;
 
-      overflow: hidden;
+      margin-bottom:
+        42px;
+
+      overflow:
+        hidden;
 
       border:
         1px solid
-        rgba(28, 43, 39, 0.08);
+        rgba(
+          28,
+          43,
+          39,
+          0.08
+        );
 
       background:
         var(--surface);
 
       box-shadow:
         var(--shadow);
+
     }
 
 
     .category-image-wrapper {
-      position: relative;
 
-      height: 265px;
+      position:
+        relative;
 
-      overflow: hidden;
+      width:
+        100%;
+
+      height:
+        265px;
+
+      overflow:
+        hidden;
 
       background:
         #ddd8ce;
+
     }
 
 
     .category-image {
-      width: 100%;
-      height: 100%;
 
-      object-fit: cover;
+      width:
+        100%;
 
-      display: block;
+      height:
+        100%;
+
+      display:
+        block;
+
+      object-fit:
+        cover;
+
     }
 
 
     .category-image-wrapper::after {
-      content: "";
 
-      position: absolute;
+      content:
+        "";
 
-      inset: 0;
+      position:
+        absolute;
+
+      inset:
+        0;
 
       background:
+
         linear-gradient(
           to top,
-          rgba(12, 28, 24, 0.72),
-          rgba(12, 28, 24, 0.04) 65%
+          rgba(
+            12,
+            28,
+            24,
+            0.76
+          ),
+          rgba(
+            12,
+            28,
+            24,
+            0.03
+          )
+          65%
         );
+
+      pointer-events:
+        none;
+
     }
 
 
     .category-heading {
-      position: absolute;
 
-      z-index: 2;
+      position:
+        absolute;
 
-      left: 27px;
-      right: 27px;
-      bottom: 24px;
+      z-index:
+        2;
 
-      color: white;
+      left:
+        27px;
+
+      right:
+        27px;
+
+      bottom:
+        24px;
+
+      color:
+        white;
+
     }
 
 
     .category-number {
-      margin-bottom: 8px;
+
+      margin-bottom:
+        8px;
 
       color:
         rgba(
           255,
           255,
           255,
-          0.65
+          0.68
         );
 
-      font-size: 9px;
+      font-size:
+        9px;
 
-      letter-spacing: 2px;
+      letter-spacing:
+        2px;
+
     }
 
 
     .category-title {
+
       margin: 0;
 
       font-family:
         "Cormorant Garamond",
         serif;
 
-      font-size: 40px;
+      font-size:
+        40px;
 
-      font-weight: 600;
+      font-weight:
+        600;
 
-      line-height: 1;
+      line-height:
+        1;
+
     }
 
 
+
+    /*
+    CATEGORY TANPA FOTO
+    */
+
     .category-no-image {
+
       padding:
         33px
         28px
-        27px;
+        28px;
+
+      color:
+        white;
 
       background:
         var(--surface-dark);
 
-      color: white;
     }
 
 
     .category-no-image
     .category-title {
-      color: white;
+
+      color:
+        white;
+
     }
 
 
 
-    /* =====================
-       SERVICES
-    ===================== */
-
+    /*
+    ========================================
+    SERVICE LIST
+    ========================================
+    */
 
     .services {
+
       padding:
         5px
         27px;
+
     }
 
 
     .service {
-      display: grid;
+
+      display:
+        grid;
 
       grid-template-columns:
-        1fr
+        minmax(
+          0,
+          1fr
+        )
         auto;
 
-      gap: 25px;
+      gap:
+        25px;
 
-      align-items: center;
+      align-items:
+        start;
 
       padding:
-        21px 0;
+        23px 0;
 
       border-bottom:
         1px solid
         var(--line);
+
     }
 
 
     .service:last-child {
-      border-bottom: none;
+
+      border-bottom:
+        none;
+
+    }
+
+
+    .service-main {
+
+      min-width:
+        0;
+
     }
 
 
     .service-name {
+
       font-family:
         "Cormorant Garamond",
         serif;
 
-      font-size: 23px;
+      font-size:
+        24px;
 
-      font-weight: 600;
+      font-weight:
+        600;
 
-      line-height: 1.15;
+      line-height:
+        1.15;
+
     }
 
 
     .service-note {
-      display: block;
 
-      max-width: 390px;
+      display:
+        block;
 
-      margin-top: 5px;
+      max-width:
+        400px;
 
-      color: var(--muted);
+      margin-top:
+        6px;
 
-      font-size: 10px;
+      color:
+        var(--muted);
 
-      line-height: 1.55;
+      font-size:
+        10px;
+
+      line-height:
+        1.55;
+
     }
 
 
     .service-price {
-      text-align: right;
 
-      color: var(--text);
+      padding-top:
+        4px;
 
-      font-size: 13px;
+      text-align:
+        right;
 
-      font-weight: 600;
+      color:
+        var(--text);
 
-      white-space: nowrap;
+      font-size:
+        13px;
+
+      font-weight:
+        600;
+
+      white-space:
+        nowrap;
+
     }
 
 
     .service-price::after {
-      content: " —";
 
-      margin-left: 5px;
+      content:
+        " —";
 
-      color: var(--red);
+      margin-left:
+        5px;
+
+      color:
+        var(--red);
+
     }
 
 
 
-    /* =====================
-       LOADING / ERROR
-    ===================== */
+    /*
+    ========================================
+    SERVICE FEATURES
+    ========================================
+    */
 
+    .service-details {
+
+      margin-top:
+        16px;
+
+      padding-top:
+        14px;
+
+      border-top:
+        1px solid
+        var(--line);
+
+    }
+
+
+    .detail-item {
+
+      display:
+        flex;
+
+      align-items:
+        flex-start;
+
+      gap:
+        9px;
+
+      margin-bottom:
+        11px;
+
+    }
+
+
+    .detail-item:last-child {
+
+      margin-bottom:
+        0;
+
+    }
+
+
+    .detail-dot {
+
+      flex-shrink:
+        0;
+
+      margin-top:
+        -1px;
+
+      color:
+        var(--gold);
+
+      font-size:
+        15px;
+
+      line-height:
+        1;
+
+    }
+
+
+    .detail-content {
+
+      min-width:
+        0;
+
+    }
+
+
+    .detail-title {
+
+      color:
+        var(--text);
+
+      font-size:
+        11px;
+
+      font-weight:
+        600;
+
+      line-height:
+        1.4;
+
+    }
+
+
+    .detail-description {
+
+      max-width:
+        400px;
+
+      margin-top:
+        3px;
+
+      color:
+        var(--muted);
+
+      font-size:
+        9px;
+
+      line-height:
+        1.55;
+
+    }
+
+
+
+    /*
+    ========================================
+    ADD ON
+    ========================================
+    */
+
+    .addon-section {
+
+      margin-top:
+        17px;
+
+      padding:
+        14px
+        15px;
+
+      border-left:
+        2px solid
+        var(--gold);
+
+      background:
+        rgba(
+          183,
+          154,
+          100,
+          0.07
+        );
+
+    }
+
+
+    .addon-label {
+
+      margin-bottom:
+        9px;
+
+      color:
+        var(--gold);
+
+      font-size:
+        8px;
+
+      font-weight:
+        600;
+
+      letter-spacing:
+        1.8px;
+
+      text-transform:
+        uppercase;
+
+    }
+
+
+    .addon-item {
+
+      display:
+        flex;
+
+      justify-content:
+        space-between;
+
+      align-items:
+        flex-start;
+
+      gap:
+        20px;
+
+      padding:
+        9px 0;
+
+      border-bottom:
+        1px solid
+        var(--line);
+
+    }
+
+
+    .addon-item:last-child {
+
+      padding-bottom:
+        0;
+
+      border-bottom:
+        none;
+
+    }
+
+
+    .addon-item:first-of-type {
+
+      padding-top:
+        0;
+
+    }
+
+
+    .addon-info {
+
+      min-width:
+        0;
+
+    }
+
+
+    .addon-title {
+
+      color:
+        var(--text);
+
+      font-size:
+        11px;
+
+      font-weight:
+        600;
+
+      line-height:
+        1.4;
+
+    }
+
+
+    .addon-description {
+
+      max-width:
+        330px;
+
+      margin-top:
+        3px;
+
+      color:
+        var(--muted);
+
+      font-size:
+        9px;
+
+      line-height:
+        1.5;
+
+    }
+
+
+    .addon-price {
+
+      flex-shrink:
+        0;
+
+      color:
+        var(--text);
+
+      font-size:
+        10px;
+
+      font-weight:
+        600;
+
+      white-space:
+        nowrap;
+
+    }
+
+
+
+    /*
+    ========================================
+    LOADING
+    ========================================
+    */
 
     .loading {
+
       padding:
         60px
         20px;
 
-      text-align: center;
+      text-align:
+        center;
 
-      color: var(--muted);
+      color:
+        var(--muted);
 
-      font-size: 12px;
+      font-size:
+        12px;
+
     }
 
 
     .loader {
-      width: 35px;
-      height: 35px;
+
+      width:
+        35px;
+
+      height:
+        35px;
 
       margin:
         0 auto
@@ -469,28 +1045,53 @@
 
       border:
         1px solid
-        rgba(183, 154, 100, 0.25);
+        rgba(
+          183,
+          154,
+          100,
+          0.25
+        );
 
       border-top-color:
         var(--gold);
 
-      border-radius: 50%;
+      border-radius:
+        50%;
 
       animation:
-        spin .8s linear infinite;
+        spin
+        0.8s
+        linear
+        infinite;
+
     }
 
 
     @keyframes spin {
+
       to {
+
         transform:
-          rotate(360deg);
+          rotate(
+            360deg
+          );
+
       }
+
     }
 
 
+
+    /*
+    ========================================
+    ERROR
+    ========================================
+    */
+
     .error {
-      padding: 20px;
+
+      padding:
+        20px;
 
       border:
         1px solid
@@ -502,155 +1103,456 @@
       color:
         #865e5e;
 
-      font-size: 12px;
+      font-size:
+        12px;
+
+      line-height:
+        1.6;
+
     }
 
 
 
-    /* =====================
-       FOOTER
-    ===================== */
-
+    /*
+    ========================================
+    FOOTER
+    ========================================
+    */
 
     footer {
-      padding-top: 17px;
+
+      margin-top:
+        58px;
+
+      padding-top:
+        28px;
 
       border-top:
         1px solid
         var(--line);
 
-      color: var(--muted);
-
-      font-size: 10px;
-
-      line-height: 1.7;
     }
 
 
-    footer strong {
-      color: var(--text);
+    .footer-brand {
 
-      font-weight: 500;
+      margin-bottom:
+        16px;
+
+      font-family:
+        "Cormorant Garamond",
+        serif;
+
+      color:
+        var(--text);
+
+      font-size:
+        29px;
+
+      font-weight:
+        600;
+
+      line-height:
+        1;
+
+    }
+
+
+    .footer-label {
+
+      display:
+        flex;
+
+      align-items:
+        center;
+
+      gap:
+        8px;
+
+      margin-bottom:
+        14px;
+
+      color:
+        var(--muted);
+
+      font-size:
+        8px;
+
+      font-weight:
+        600;
+
+      letter-spacing:
+        1.7px;
+
+      text-transform:
+        uppercase;
+
+    }
+
+
+    .footer-label::before {
+
+      content:
+        "";
+
+      width:
+        22px;
+
+      height:
+        1px;
+
+      background:
+        var(--gold);
+
+    }
+
+
+    .footer-address-grid {
+
+      display:
+        grid;
+
+      grid-template-columns:
+        repeat(
+          2,
+          minmax(
+            0,
+            1fr
+          )
+        );
+
+      gap:
+        28px;
+
+    }
+
+
+    .footer-location {
+
+      color:
+        var(--muted);
+
+      font-size:
+        10px;
+
+      line-height:
+        1.7;
+
+    }
+
+
+    .footer-location strong {
+
+      display:
+        block;
+
+      margin-bottom:
+        4px;
+
+      color:
+        var(--text);
+
+      font-size:
+        10px;
+
+      font-weight:
+        600;
+
+    }
+
+
+    .footer-note {
+
+      margin-top:
+        26px;
+
+      padding-top:
+        16px;
+
+      border-top:
+        1px solid
+        var(--line);
+
+      color:
+        var(--muted);
+
+      font-size:
+        9px;
+
+      line-height:
+        1.7;
+
     }
 
 
 
-    /* =====================
-       MOBILE
-    ===================== */
-
+    /*
+    ========================================
+    MOBILE
+    ========================================
+    */
 
     @media
     (max-width: 600px) {
 
       .page {
+
         width:
           calc(
             100% - 26px
           );
 
-        padding-top:
-          37px;
+        padding:
+          37px 0
+          52px;
+
       }
 
 
       .brand {
+
         margin-bottom:
           53px;
+
+      }
+
+
+      .brand-top {
+
+        font-size:
+          8px;
+
       }
 
 
       .brand h1 {
+
         font-size:
           59px;
+
       }
 
 
       .brand-description {
+
         max-width:
           330px;
 
         font-size:
           13px;
+
       }
 
 
       .intro {
-        display: block;
+
+        display:
+          block;
 
         margin-bottom:
           24px;
+
       }
 
 
       .intro h2 {
+
         font-size:
           39px;
+
       }
 
 
       .intro-text {
-        margin-top:
-          12px;
 
         max-width:
           330px;
 
+        margin-top:
+          12px;
+
         text-align:
           left;
+
       }
 
 
       .category {
+
         margin-bottom:
           29px;
+
       }
 
 
       .category-image-wrapper {
+
         height:
           205px;
+
       }
 
 
       .category-heading {
+
         left:
+          20px;
+
+        right:
           20px;
 
         bottom:
           19px;
+
       }
 
 
       .category-title {
+
         font-size:
           34px;
+
+      }
+
+
+      .category-no-image {
+
+        padding:
+          27px
+          20px
+          23px;
+
       }
 
 
       .services {
+
         padding:
-          4px 19px;
+          4px
+          19px;
+
       }
 
 
       .service {
-        padding:
-          18px 0;
 
-        gap: 15px;
+        grid-template-columns:
+          minmax(
+            0,
+            1fr
+          )
+          auto;
+
+        gap:
+          14px;
+
+        padding:
+          20px 0;
+
       }
 
 
       .service-name {
+
         font-size:
           21px;
+
       }
 
 
       .service-price {
+
         font-size:
+          11px;
+
+      }
+
+
+      .detail-description {
+
+        max-width:
+          260px;
+
+      }
+
+
+      .addon-section {
+
+        padding:
+          13px;
+
+      }
+
+
+      .addon-item {
+
+        gap:
           12px;
+
+      }
+
+
+      .footer-address-grid {
+
+        grid-template-columns:
+          1fr;
+
+        gap:
+          17px;
+
+      }
+
+    }
+
+
+
+    /*
+    VERY SMALL MOBILE
+    */
+
+    @media
+    (max-width: 380px) {
+
+      .service {
+
+        display:
+          block;
+
+      }
+
+
+      .service-price {
+
+        margin-top:
+          9px;
+
+        text-align:
+          left;
+
+      }
+
+
+      .service-price::after {
+
+        display:
+          none;
+
+      }
+
+
+      .addon-item {
+
+        display:
+          block;
+
+      }
+
+
+      .addon-price {
+
+        margin-top:
+          5px;
+
       }
 
     }
@@ -660,57 +1562,93 @@
 </head>
 
 
+
 <body>
+
 
   <main class="page">
 
 
+    <!-- =================================
+         HEADER
+    ================================== -->
+
     <header class="brand">
 
+
       <div class="brand-top">
+
         Hair & Skin Care · Bekasi
+
       </div>
 
+
       <h1>
+
         Eva Salon
+
       </h1>
 
+
       <p class="brand-description">
+
         Daftar perawatan rambut dan kecantikan
         Eva Salon. Pilih treatment yang sesuai
         dengan kebutuhan Anda.
+
       </p>
+
 
     </header>
 
 
 
+    <!-- =================================
+         PRICE LIST INTRO
+    ================================== -->
+
     <section class="intro">
+
 
       <div>
 
+
         <div class="intro-label">
+
           Price List
+
         </div>
 
+
         <h2>
+
           Layanan Kami
+
         </h2>
+
 
       </div>
 
 
       <p class="intro-text">
+
         Harga layanan dapat berbeda
         menyesuaikan kebutuhan dan
         kondisi rambut.
+
       </p>
+
 
     </section>
 
 
 
+    <!-- =================================
+         DATA GOOGLE SHEET
+    ================================== -->
+
     <div id="content">
+
 
       <div class="loading">
 
@@ -720,19 +1658,74 @@
 
       </div>
 
+
     </div>
 
 
 
+    <!-- =================================
+         FOOTER
+    ================================== -->
+
     <footer>
 
-      Harga dapat berubah sewaktu-waktu.
 
-      <br>
+      <div class="footer-brand">
 
-      Silakan konfirmasi kepada
-      <strong>Eva Salon</strong>
-      untuk informasi terbaru.
+        Eva Salon
+
+      </div>
+
+
+      <div class="footer-label">
+
+        Lokasi Kami
+
+      </div>
+
+
+      <div class="footer-address-grid">
+
+
+        <div class="footer-location">
+
+          <strong>
+            Pusat · Bekasi Timur
+          </strong>
+
+          Jl. Nusantara Raya No. 3 & 4,
+          Perumnas 3, Bekasi Timur
+
+        </div>
+
+
+        <div class="footer-location">
+
+          <strong>
+            Cabang · Bekasi Utara
+          </strong>
+
+          Perum Candrabaga Raya Blok AQ No. 8,
+          Pondok Ungu Permai,
+          Bekasi Utara
+
+        </div>
+
+
+      </div>
+
+
+      <div class="footer-note">
+
+        Harga dapat berubah sewaktu-waktu.
+
+        <br>
+
+        Silakan konfirmasi kepada Eva Salon
+        untuk informasi terbaru.
+
+      </div>
+
 
     </footer>
 
@@ -744,9 +1737,11 @@
   <script>
 
     /*
-    ======================================
-    GANTI DENGAN URL APPS SCRIPT KAMU
-    ======================================
+    ========================================
+    GOOGLE APPS SCRIPT API
+
+    URL SUDAH DIMASUKKAN
+    ========================================
     */
 
     const API_URL =
@@ -754,37 +1749,165 @@
 
 
 
-    function formatRupiah(number) {
+    /*
+    ========================================
+    FORMAT PRICE
 
-      return new Intl.NumberFormat(
-        'id-ID',
-        {
-          style:
-            'currency',
+    SUPPORT:
 
-          currency:
-            'IDR',
+    50000
+    50.000
+    150000 - 300000
+    150.000 - 300.000
+    Rp 150.000 - 300.000
+    ========================================
+    */
 
-          maximumFractionDigits:
-            0
-        }
-      ).format(number);
+    function formatPrice(price) {
+
+
+      if (
+        price === null ||
+        price === undefined
+      ) {
+
+        return '';
+
+      }
+
+
+      let value =
+        String(price)
+          .trim();
+
+
+      if (!value) {
+
+        return '';
+
+      }
+
+
+      /*
+      Kalau sudah pakai Rp
+      */
+
+      if (
+        /^rp[\s.]?/i.test(value)
+      ) {
+
+        return value;
+
+      }
+
+
+      /*
+      Angka murni
+      */
+
+      if (
+        /^\d+$/.test(value)
+      ) {
+
+        const formatted =
+          new Intl.NumberFormat(
+            'id-ID'
+          )
+          .format(
+            Number(value)
+          );
+
+
+        return (
+          'Rp ' +
+          formatted
+        );
+
+      }
+
+
+      /*
+      RANGE ANGKA MURNI
+
+      150000 - 300000
+      */
+
+      const rangeMatch =
+        value.match(
+          /^(\d+)\s*[-–—]\s*(\d+)$/
+        );
+
+
+      if (rangeMatch) {
+
+
+        const min =
+          new Intl.NumberFormat(
+            'id-ID'
+          )
+          .format(
+            Number(
+              rangeMatch[1]
+            )
+          );
+
+
+        const max =
+          new Intl.NumberFormat(
+            'id-ID'
+          )
+          .format(
+            Number(
+              rangeMatch[2]
+            )
+          );
+
+
+        return (
+          'Rp ' +
+          min +
+          ' - ' +
+          max
+        );
+
+      }
+
+
+      /*
+      Kalau user sudah tulis
+      150.000 - 300.000
+      */
+
+      return (
+        'Rp ' +
+        value
+      );
 
     }
 
 
 
+    /*
+    ========================================
+    ESCAPE HTML
+    ========================================
+    */
+
     function escapeHTML(value) {
+
 
       const div =
         document.createElement(
           'div'
         );
 
+
       div.textContent =
-        value == null
+        value === null ||
+        value === undefined
           ? ''
           : String(value);
+
 
       return div.innerHTML;
 
@@ -792,7 +1915,14 @@
 
 
 
+    /*
+    ========================================
+    CALLBACK APPS SCRIPT
+    ========================================
+    */
+
     function loadEvaSalonData(response) {
+
 
       console.log(
         'DATA MASUK:',
@@ -805,10 +1935,14 @@
         response.success !== true
       ) {
 
+
         showError(
-          response?.message ||
-          'Data tidak tersedia.'
+          response &&
+          response.message
+            ? response.message
+            : 'Data tidak tersedia.'
         );
+
 
         return;
 
@@ -823,7 +1957,14 @@
 
 
 
+    /*
+    ========================================
+    RENDER PRICE LIST
+    ========================================
+    */
+
     function renderPriceList(categories) {
+
 
       const container =
         document.getElementById(
@@ -836,6 +1977,7 @@
         categories.length === 0
       ) {
 
+
         container.innerHTML = `
 
           <div class="error">
@@ -847,16 +1989,22 @@
 
         `;
 
+
         return;
 
       }
 
 
-      let html = '';
+      let html =
+        '';
+
 
 
       categories.forEach(
-        (category, index) => {
+        (
+          category,
+          categoryIndex
+        ) => {
 
 
           html += `
@@ -867,13 +2015,22 @@
 
 
 
+          /*
+          =================================
+          CATEGORY IMAGE
+          =================================
+          */
+
+
           if (category.image) {
+
 
             html += `
 
               <div
                 class="category-image-wrapper"
               >
+
 
                 <img
 
@@ -900,18 +2057,21 @@
                   class="category-heading"
                 >
 
+
                   <div
                     class="category-number"
                   >
+
                     ${
                       String(
-                        index + 1
+                        categoryIndex + 1
                       )
                       .padStart(
                         2,
                         '0'
                       )
                     }
+
                   </div>
 
 
@@ -927,6 +2087,7 @@
 
                   </h3>
 
+
                 </div>
 
 
@@ -934,10 +2095,12 @@
 
             `;
 
+
           }
 
 
           else {
+
 
             html += `
 
@@ -945,18 +2108,21 @@
                 class="category-no-image"
               >
 
+
                 <div
                   class="category-number"
                 >
+
                   ${
                     String(
-                      index + 1
+                      categoryIndex + 1
                     )
                     .padStart(
                       2,
                       '0'
                     )
                   }
+
                 </div>
 
 
@@ -977,8 +2143,16 @@
 
             `;
 
+
           }
 
+
+
+          /*
+          =================================
+          SERVICES
+          =================================
+          */
 
 
           html += `
@@ -990,46 +2164,335 @@
 
 
           category.services
-            .forEach(service => {
+            .forEach(
+              service => {
 
 
-              html += `
+                const details =
+                  Array.isArray(
+                    service.details
+                  )
+                    ? service.details
+                    : [];
 
-                <div class="service">
+
+                const features =
+                  details.filter(
+                    item =>
+                      String(
+                        item.type || ''
+                      )
+                      .toLowerCase() !==
+                      'addon'
+                  );
 
 
-                  <div>
+                const addons =
+                  details.filter(
+                    item =>
+                      String(
+                        item.type || ''
+                      )
+                      .toLowerCase() ===
+                      'addon'
+                  );
 
-                    <div
-                      class="service-name"
-                    >
+
+
+                html += `
+
+                  <article class="service">
+
+
+                    <div class="service-main">
+
+
+                      <div
+                        class="service-name"
+                      >
+
+                        ${
+                          escapeHTML(
+                            service.service
+                          )
+                        }
+
+                      </div>
+
+
 
                       ${
-                        escapeHTML(
-                          service.service
-                        )
+                        service.note
+                        ?
+
+                        `
+
+                          <div
+                            class="service-note"
+                          >
+
+                            ${
+                              escapeHTML(
+                                service.note
+                              )
+                            }
+
+                          </div>
+
+                        `
+
+                        :
+
+                        ''
                       }
+
+
+
+                      ${
+                        features.length > 0
+
+                        ?
+
+                        `
+
+                          <div
+                            class="service-details"
+                          >
+
+                            ${
+                              features
+                                .map(
+                                  item => `
+
+                                    <div
+                                      class="detail-item"
+                                    >
+
+
+                                      <div
+                                        class="detail-dot"
+                                      >
+                                        •
+                                      </div>
+
+
+                                      <div
+                                        class="detail-content"
+                                      >
+
+
+                                        <div
+                                          class="detail-title"
+                                        >
+
+                                          ${
+                                            escapeHTML(
+                                              item.title
+                                            )
+                                          }
+
+                                        </div>
+
+
+                                        ${
+                                          item.description
+
+                                          ?
+
+                                          `
+
+                                            <div
+                                              class="detail-description"
+                                            >
+
+                                              ${
+                                                escapeHTML(
+                                                  item.description
+                                                )
+                                              }
+
+                                            </div>
+
+                                          `
+
+                                          :
+
+                                          ''
+                                        }
+
+
+                                      </div>
+
+
+                                    </div>
+
+                                  `
+                                )
+                                .join('')
+                            }
+
+                          </div>
+
+                        `
+
+                        :
+
+                        ''
+                      }
+
+
+
+                      ${
+                        addons.length > 0
+
+                        ?
+
+                        `
+
+                          <div
+                            class="addon-section"
+                          >
+
+
+                            <div
+                              class="addon-label"
+                            >
+
+                              Add-on
+
+                            </div>
+
+
+                            ${
+                              addons
+                                .map(
+                                  item => `
+
+                                    <div
+                                      class="addon-item"
+                                    >
+
+
+                                      <div
+                                        class="addon-info"
+                                      >
+
+
+                                        <div
+                                          class="addon-title"
+                                        >
+
+                                          + ${
+                                            escapeHTML(
+                                              item.title
+                                            )
+                                          }
+
+                                        </div>
+
+
+                                        ${
+                                          item.description
+
+                                          ?
+
+                                          `
+
+                                            <div
+                                              class="addon-description"
+                                            >
+
+                                              ${
+                                                escapeHTML(
+                                                  item.description
+                                                )
+                                              }
+
+                                            </div>
+
+                                          `
+
+                                          :
+
+                                          ''
+                                        }
+
+
+                                      </div>
+
+
+
+                                      ${
+                                        item.price
+
+                                        ?
+
+                                        `
+
+                                          <div
+                                            class="addon-price"
+                                          >
+
+                                            ${
+                                              escapeHTML(
+                                                formatPrice(
+                                                  item.price
+                                                )
+                                              )
+                                            }
+
+                                          </div>
+
+                                        `
+
+                                        :
+
+                                        ''
+                                      }
+
+
+                                    </div>
+
+                                  `
+                                )
+                                .join('')
+                            }
+
+
+                          </div>
+
+                        `
+
+                        :
+
+                        ''
+                      }
+
 
                     </div>
 
 
+
                     ${
-                      service.note
+                      service.price
+
                       ?
 
                       `
 
-                        <span
-                          class="service-note"
+                        <div
+                          class="service-price"
                         >
 
                           ${
                             escapeHTML(
-                              service.note
+                              formatPrice(
+                                service.price
+                              )
                             )
                           }
 
-                        </span>
+                        </div>
 
                       `
 
@@ -1038,29 +2501,14 @@
                       ''
                     }
 
-                  </div>
+
+                  </article>
+
+                `;
 
 
-
-                  <div
-                    class="service-price"
-                  >
-
-                    ${
-                      formatRupiah(
-                        service.price
-                      )
-                    }
-
-                  </div>
-
-
-                </div>
-
-              `;
-
-
-            });
+              }
+            );
 
 
 
@@ -1073,7 +2521,8 @@
           `;
 
 
-        });
+        }
+      );
 
 
 
@@ -1084,9 +2533,17 @@
 
 
 
+    /*
+    ========================================
+    ERROR
+    ========================================
+    */
+
     function showError(message) {
 
+
       console.error(
+        'ERROR:',
         message
       );
 
@@ -1113,7 +2570,14 @@
 
 
 
+    /*
+    ========================================
+    LOAD DATA VIA JSONP
+    ========================================
+    */
+
     function loadData() {
+
 
       const script =
         document.createElement(
@@ -1135,35 +2599,55 @@
         Date.now();
 
 
+      console.log(
+        'Loading API:',
+        script.src
+      );
+
+
       script.onerror =
         function () {
 
+
           showError(
-            'Gagal terhubung ke server.'
+            'Gagal terhubung ke Google Apps Script.'
           );
+
 
         };
 
 
-      document.body.appendChild(
-        script
-      );
+      document.body
+        .appendChild(
+          script
+        );
 
     }
 
 
 
+    /*
+    CALLBACK HARUS GLOBAL
+    */
+
     window.loadEvaSalonData =
       loadEvaSalonData;
 
+
+
+    /*
+    START
+    */
 
     window.addEventListener(
       'DOMContentLoaded',
       loadData
     );
 
+
   </script>
 
 
 </body>
+
 </html>
