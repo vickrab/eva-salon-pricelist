@@ -36,57 +36,79 @@
 
     :root {
       --background: #f3efe7;
-      --surface: rgba(251, 249, 244, 0.93);
+      --surface: rgba(251, 249, 244, 0.94);
+
       --dark-green: #163d35;
       --dark-green-2: #214941;
+
       --text: #18312b;
       --muted: #66736e;
+
       --gold: #b89253;
       --gold-soft: #e8d9b6;
+
       --blush: #ddb6ae;
       --mint: #b0d2c6;
+
       --line: rgba(24, 49, 43, 0.12);
-      --shadow: 0 20px 55px rgba(25, 45, 39, 0.08);
+
+      --shadow:
+        0 20px 55px rgba(25, 45, 39, 0.08);
     }
+
 
     * {
       box-sizing: border-box;
     }
 
+
     html {
       scroll-behavior: smooth;
     }
 
+
     body {
       margin: 0;
+
       min-height: 100vh;
+
       overflow-x: hidden;
+
       position: relative;
 
-      font-family: "DM Sans", sans-serif;
-      color: var(--text);
+      font-family:
+        "DM Sans",
+        sans-serif;
+
+      color:
+        var(--text);
 
       background:
+
         radial-gradient(
           circle at 15% 12%,
-          rgba(176, 210, 198, 0.58),
-          transparent 28%
+          rgba(176, 210, 198, 0.60),
+          transparent 29%
         ),
+
         radial-gradient(
           circle at 88% 14%,
-          rgba(232, 217, 182, 0.55),
-          transparent 25%
+          rgba(232, 217, 182, 0.60),
+          transparent 26%
         ),
+
         radial-gradient(
           circle at 18% 87%,
-          rgba(221, 182, 174, 0.38),
-          transparent 27%
+          rgba(221, 182, 174, 0.42),
+          transparent 28%
         ),
+
         radial-gradient(
           circle at 84% 76%,
-          rgba(176, 210, 198, 0.32),
-          transparent 24%
+          rgba(176, 210, 198, 0.36),
+          transparent 25%
         ),
+
         linear-gradient(
           180deg,
           #f6f2ea 0%,
@@ -94,13 +116,16 @@
           #ece5d8 100%
         );
 
-      background-attachment: fixed;
+      background-attachment:
+        fixed;
     }
+
 
     body::before {
       content: "";
 
       position: fixed;
+
       inset: 0;
 
       z-index: -1;
@@ -110,13 +135,15 @@
       opacity: 0.18;
 
       background-image:
+
         linear-gradient(
-          rgba(255, 255, 255, 0.40) 1px,
+          rgba(255,255,255,0.42) 1px,
           transparent 1px
         ),
+
         linear-gradient(
           90deg,
-          rgba(24, 49, 43, 0.025) 1px,
+          rgba(24,49,43,0.025) 1px,
           transparent 1px
         );
 
@@ -124,6 +151,7 @@
         44px 44px,
         44px 44px;
     }
+
 
     .bg-blob {
       position: fixed;
@@ -137,6 +165,7 @@
       pointer-events: none;
     }
 
+
     .bg-blob-1 {
       width: 520px;
       height: 520px;
@@ -147,6 +176,7 @@
       background:
         rgba(176, 210, 198, 0.58);
     }
+
 
     .bg-blob-2 {
       width: 430px;
@@ -159,6 +189,7 @@
         rgba(232, 217, 182, 0.48);
     }
 
+
     .bg-blob-3 {
       width: 430px;
       height: 430px;
@@ -170,6 +201,12 @@
         rgba(221, 182, 174, 0.36);
     }
 
+
+
+    /* =====================================
+       PAGE
+    ===================================== */
+
     .page {
       width:
         min(
@@ -177,46 +214,72 @@
           calc(100% - 32px)
         );
 
-      margin: 0 auto;
+      margin:
+        0 auto;
 
       padding:
         56px 0
         72px;
     }
 
+
+
+    /* =====================================
+       BRAND
+    ===================================== */
+
     .brand {
-      margin-bottom: 62px;
+      margin-bottom:
+        62px;
     }
+
 
     .brand-top {
-      display: flex;
-      align-items: center;
+      display:
+        flex;
 
-      gap: 12px;
+      align-items:
+        center;
 
-      margin-bottom: 20px;
+      gap:
+        12px;
 
-      color: var(--muted);
+      margin-bottom:
+        20px;
 
-      font-size: 11px;
-      font-weight: 700;
+      color:
+        var(--muted);
 
-      letter-spacing: 2.2px;
+      font-size:
+        11px;
 
-      text-transform: uppercase;
+      font-weight:
+        700;
+
+      letter-spacing:
+        2.2px;
+
+      text-transform:
+        uppercase;
     }
+
 
     .brand-top::before {
       content: "";
 
-      width: 38px;
-      height: 2px;
+      width:
+        38px;
 
-      flex-shrink: 0;
+      height:
+        2px;
+
+      flex-shrink:
+        0;
 
       background:
         var(--gold);
     }
+
 
     .brand h1 {
       margin: 0;
@@ -228,107 +291,161 @@
           76px
         );
 
-      font-weight: 700;
+      font-weight:
+        700;
 
-      letter-spacing: -3px;
+      letter-spacing:
+        -3px;
 
-      line-height: 0.98;
+      line-height:
+        0.98;
 
       color:
         var(--dark-green);
     }
 
-    .brand-description {
-      max-width: 540px;
 
-      margin-top: 22px;
+    .brand-description {
+      max-width:
+        540px;
+
+      margin-top:
+        22px;
 
       color:
         var(--muted);
 
-      font-size: 17px;
+      font-size:
+        17px;
 
-      line-height: 1.7;
+      line-height:
+        1.7;
     }
+
+
+
+    /* =====================================
+       INTRO
+    ===================================== */
 
     .intro {
-      display: flex;
+      display:
+        flex;
 
-      justify-content: space-between;
-      align-items: flex-end;
+      justify-content:
+        space-between;
 
-      gap: 28px;
+      align-items:
+        flex-end;
 
-      margin-bottom: 28px;
+      gap:
+        28px;
+
+      margin-bottom:
+        28px;
     }
 
+
     .intro-label {
-      display: flex;
-      align-items: center;
+      display:
+        flex;
 
-      gap: 10px;
+      align-items:
+        center;
 
-      margin-bottom: 10px;
+      gap:
+        10px;
+
+      margin-bottom:
+        10px;
 
       color:
         var(--muted);
 
-      font-size: 11px;
-      font-weight: 700;
+      font-size:
+        11px;
 
-      letter-spacing: 2px;
+      font-weight:
+        700;
 
-      text-transform: uppercase;
+      letter-spacing:
+        2px;
+
+      text-transform:
+        uppercase;
     }
+
 
     .intro-label::before {
       content: "";
 
-      width: 28px;
-      height: 2px;
+      width:
+        28px;
+
+      height:
+        2px;
 
       background:
         var(--gold);
     }
 
+
     .intro h2 {
       margin: 0;
 
-      font-size: 40px;
+      font-size:
+        40px;
 
-      font-weight: 700;
+      font-weight:
+        700;
 
-      letter-spacing: -1.4px;
+      letter-spacing:
+        -1.4px;
 
-      line-height: 1;
+      line-height:
+        1;
 
       color:
         var(--text);
     }
 
+
     .intro-text {
-      max-width: 300px;
+      max-width:
+        300px;
 
       color:
         var(--muted);
 
-      font-size: 15px;
+      font-size:
+        15px;
 
-      line-height: 1.65;
+      line-height:
+        1.65;
 
-      text-align: right;
+      text-align:
+        right;
     }
 
-    .category {
-      margin-bottom: 34px;
 
-      overflow: hidden;
+
+    /* =====================================
+       CATEGORY
+    ===================================== */
+
+    .category {
+      margin-bottom:
+        34px;
+
+      overflow:
+        hidden;
 
       border:
         1px solid
         rgba(24, 49, 43, 0.08);
 
-      border-radius: 6px;
+      border-radius:
+        6px;
 
       background:
         var(--surface);
@@ -340,13 +457,19 @@
         blur(12px);
     }
 
+
     .category-image-wrapper {
-      position: relative;
+      position:
+        relative;
 
-      width: 100%;
-      height: 250px;
+      width:
+        100%;
 
-      overflow: hidden;
+      height:
+        250px;
+
+      overflow:
+        hidden;
 
       background:
         linear-gradient(
@@ -356,20 +479,30 @@
         );
     }
 
+
     .category-image {
-      width: 100%;
-      height: 100%;
+      width:
+        100%;
 
-      display: block;
+      height:
+        100%;
 
-      object-fit: cover;
+      display:
+        block;
+
+      object-fit:
+        cover;
     }
+
 
     .category-image-wrapper::after {
       content: "";
 
-      position: absolute;
-      inset: 0;
+      position:
+        absolute;
+
+      inset:
+        0;
 
       background:
         linear-gradient(
@@ -378,60 +511,82 @@
           rgba(8, 33, 27, 0.08) 72%
         );
 
-      pointer-events: none;
+      pointer-events:
+        none;
     }
+
 
     .category-heading {
-      position: absolute;
+      position:
+        absolute;
 
-      z-index: 2;
+      z-index:
+        2;
 
-      left: 30px;
-      right: 30px;
-      bottom: 24px;
+      left:
+        30px;
 
-      color: white;
+      right:
+        30px;
+
+      bottom:
+        24px;
+
+      color:
+        white;
     }
 
+
     .category-number {
-      margin-bottom: 8px;
+      margin-bottom:
+        8px;
 
       color:
         rgba(255, 255, 255, 0.72);
 
-      font-size: 11px;
-      font-weight: 600;
+      font-size:
+        11px;
 
-      letter-spacing: 2px;
+      font-weight:
+        600;
+
+      letter-spacing:
+        2px;
     }
+
 
     .category-title {
       margin: 0;
 
-      font-size: 32px;
+      font-size:
+        32px;
 
-      font-weight: 700;
+      font-weight:
+        700;
 
-      line-height: 1.14;
+      line-height:
+        1.14;
 
-      letter-spacing: -1px;
-
-      text-shadow:
-        0 2px 10px
-        rgba(0, 0, 0, 0.24);
+      letter-spacing:
+        -1px;
     }
 
-    .category-no-image {
-      padding: 30px;
 
-      color: white;
+    .category-no-image {
+      padding:
+        30px;
+
+      color:
+        white;
 
       background:
+
         radial-gradient(
           circle at top right,
           rgba(232, 217, 182, 0.18),
           transparent 40%
         ),
+
         linear-gradient(
           135deg,
           var(--dark-green),
@@ -439,16 +594,25 @@
         );
     }
 
+
     .category-no-image
     .category-title {
-      color: white;
+      color:
+        white;
     }
+
+
+
+    /* =====================================
+       SERVICES
+    ===================================== */
 
     .services {
       padding:
         10px
         30px;
     }
+
 
     .service {
       padding:
@@ -459,142 +623,215 @@
         var(--line);
     }
 
+
     .service:last-child {
-      border-bottom: none;
+      border-bottom:
+        none;
     }
 
+
+
+    /*
+    PENTING:
+
+    Kolom harga dibuat FIXED.
+    Semua harga akan punya right edge
+    yang sama.
+    */
+
     .service-header {
-      display: grid;
+      display:
+        grid;
 
       grid-template-columns:
         minmax(0, 1fr)
-        auto;
+        190px;
 
-      gap: 24px;
+      column-gap:
+        24px;
 
-      align-items: start;
+      align-items:
+        start;
     }
+
 
     .service-main {
-      min-width: 0;
+      min-width:
+        0;
     }
 
+
     .service-name {
-      font-size: 21px;
-
-      font-weight: 700;
-
-      line-height: 1.35;
-
       color:
         var(--text);
 
-      letter-spacing: -0.3px;
+      font-size:
+        21px;
 
-      white-space: normal;
+      font-weight:
+        700;
 
-      overflow-wrap: break-word;
+      line-height:
+        1.38;
 
-      word-break: normal;
+      letter-spacing:
+        -0.3px;
+
+      white-space:
+        normal;
+
+      overflow-wrap:
+        normal;
+
+      word-break:
+        normal;
     }
 
-    .service-note {
-      margin-top: 7px;
 
-      max-width: 500px;
+    .service-note {
+      margin-top:
+        7px;
+
+      max-width:
+        500px;
 
       color:
         var(--muted);
 
-      font-size: 15px;
+      font-size:
+        15px;
 
-      line-height: 1.62;
+      line-height:
+        1.62;
     }
 
+
     .service-price {
-      padding-top: 1px;
+      width:
+        190px;
+
+      padding-top:
+        2px;
 
       color:
         var(--text);
 
-      font-size: 16px;
+      font-size:
+        16px;
 
-      font-weight: 700;
+      font-weight:
+        700;
 
-      line-height: 1.45;
+      line-height:
+        1.45;
 
-      text-align: right;
+      text-align:
+        right;
 
-      white-space: nowrap;
+      white-space:
+        nowrap;
+
+      font-variant-numeric:
+        tabular-nums;
     }
 
 
 
-    .service-details {
-      margin-top: 18px;
+    /* =====================================
+       DETAILS
+    ===================================== */
 
-      padding-top: 17px;
+    .service-details {
+      margin-top:
+        18px;
+
+      padding-top:
+        17px;
 
       border-top:
         1px solid
         var(--line);
     }
 
+
     .detail-item {
-      display: grid;
+      display:
+        grid;
 
       grid-template-columns:
         10px
         minmax(0, 1fr);
 
-      gap: 12px;
+      gap:
+        12px;
 
-      margin-bottom: 16px;
+      margin-bottom:
+        16px;
     }
+
 
     .detail-item:last-child {
-      margin-bottom: 0;
+      margin-bottom:
+        0;
     }
 
+
     .detail-dot {
-      padding-top: 2px;
+      padding-top:
+        2px;
 
       color:
         var(--gold);
 
-      font-size: 17px;
+      font-size:
+        17px;
 
-      line-height: 1;
+      line-height:
+        1;
     }
 
+
     .detail-title {
-      font-size: 16px;
-
-      font-weight: 700;
-
-      line-height: 1.45;
-
       color:
         var(--text);
 
-      word-break: break-word;
+      font-size:
+        16px;
+
+      font-weight:
+        700;
+
+      line-height:
+        1.45;
     }
 
-    .detail-description {
-      margin-top: 4px;
 
-      max-width: 520px;
+    .detail-description {
+      margin-top:
+        4px;
+
+      max-width:
+        520px;
 
       color:
         var(--muted);
 
-      font-size: 14px;
+      font-size:
+        14px;
 
-      line-height: 1.6;
+      line-height:
+        1.6;
     }
 
+
+
+    /* =====================================
+       ADD ON
+    ===================================== */
+
     .addon-section {
-      margin-top: 20px;
+      margin-top:
+        20px;
 
       padding:
         18px
@@ -615,31 +852,41 @@
         );
     }
 
+
     .addon-label {
-      margin-bottom: 12px;
+      margin-bottom:
+        12px;
 
       color:
         var(--gold);
 
-      font-size: 13px;
+      font-size:
+        13px;
 
-      font-weight: 700;
+      font-weight:
+        700;
 
-      letter-spacing: 2px;
+      letter-spacing:
+        2px;
 
-      text-transform: uppercase;
+      text-transform:
+        uppercase;
     }
 
+
     .addon-item {
-      display: grid;
+      display:
+        grid;
 
       grid-template-columns:
         minmax(0, 1fr)
-        auto;
+        190px;
 
-      gap: 24px;
+      column-gap:
+        24px;
 
-      align-items: start;
+      align-items:
+        start;
 
       padding:
         13px 0;
@@ -649,78 +896,109 @@
         var(--line);
     }
 
+
     .addon-item:last-child {
-      border-bottom: none;
+      border-bottom:
+        none;
     }
+
 
     .addon-info {
-      min-width: 0;
+      min-width:
+        0;
     }
 
+
     .addon-title {
-      font-size: 15px;
-
-      font-weight: 700;
-
-      line-height: 1.45;
-
       color:
         var(--text);
 
-      white-space: normal;
+      font-size:
+        15px;
 
-      overflow-wrap: break-word;
+      font-weight:
+        700;
 
-      word-break: normal;
+      line-height:
+        1.45;
     }
 
-    .addon-description {
-      margin-top: 4px;
 
-      max-width: 480px;
+    .addon-description {
+      margin-top:
+        4px;
+
+      max-width:
+        480px;
 
       color:
         var(--muted);
 
-      font-size: 14px;
+      font-size:
+        14px;
 
-      line-height: 1.6;
+      line-height:
+        1.6;
     }
 
+
     .addon-price {
-      padding-top: 1px;
+      width:
+        190px;
+
+      padding-top:
+        1px;
 
       color:
         var(--text);
 
-      font-size: 16px;
+      font-size:
+        16px;
 
-      font-weight: 700;
+      font-weight:
+        700;
 
-      line-height: 1.45;
+      line-height:
+        1.45;
 
-      text-align: right;
+      text-align:
+        right;
 
-      white-space: nowrap;
+      white-space:
+        nowrap;
+
+      font-variant-numeric:
+        tabular-nums;
     }
 
+
+
+    /* =====================================
+       LOADING
+    ===================================== */
 
     .loading {
       padding:
         65px
         20px;
 
-      text-align: center;
+      text-align:
+        center;
 
       color:
         var(--muted);
 
-      font-size: 16px;
+      font-size:
+        16px;
     }
 
+
     .loader {
-      width: 40px;
-      height: 40px;
+      width:
+        40px;
+
+      height:
+        40px;
 
       margin:
         0 auto
@@ -733,12 +1011,16 @@
       border-top-color:
         var(--gold);
 
-      border-radius: 50%;
+      border-radius:
+        50%;
 
       animation:
-        spin 0.8s
-        linear infinite;
+        spin
+        0.8s
+        linear
+        infinite;
     }
+
 
     @keyframes spin {
       to {
@@ -747,14 +1029,22 @@
       }
     }
 
+
+
+    /* =====================================
+       ERROR
+    ===================================== */
+
     .error {
-      padding: 22px;
+      padding:
+        22px;
 
       border:
         1px solid
         rgba(168, 87, 87, 0.20);
 
-      border-radius: 4px;
+      border-radius:
+        4px;
 
       background:
         rgba(255, 241, 241, 0.82);
@@ -762,17 +1052,28 @@
       color:
         #7c4f4f;
 
-      font-size: 16px;
+      font-size:
+        16px;
 
-      line-height: 1.65;
+      line-height:
+        1.65;
     }
 
+
+
+    /* =====================================
+       FOOTER
+    ===================================== */
+
     footer {
-      margin-top: 60px;
+      margin-top:
+        60px;
 
-      padding: 30px;
+      padding:
+        30px;
 
-      border-radius: 6px;
+      border-radius:
+        6px;
 
       border:
         1px solid
@@ -785,54 +1086,73 @@
           rgba(24, 74, 64, 0.96)
         );
 
-      color: white;
+      color:
+        white;
 
       box-shadow:
         var(--shadow);
     }
 
+
     .footer-brand {
-      margin-bottom: 18px;
+      margin-bottom:
+        18px;
 
-      font-size: 28px;
+      font-size:
+        28px;
 
-      font-weight: 700;
-
-      letter-spacing: -1px;
+      font-weight:
+        700;
     }
 
+
     .footer-label {
-      display: flex;
-      align-items: center;
+      display:
+        flex;
 
-      gap: 9px;
+      align-items:
+        center;
 
-      margin-bottom: 16px;
+      gap:
+        9px;
+
+      margin-bottom:
+        16px;
 
       color:
         rgba(255, 255, 255, 0.64);
 
-      font-size: 11px;
+      font-size:
+        11px;
 
-      font-weight: 700;
+      font-weight:
+        700;
 
-      letter-spacing: 1.8px;
+      letter-spacing:
+        1.8px;
 
-      text-transform: uppercase;
+      text-transform:
+        uppercase;
     }
+
 
     .footer-label::before {
       content: "";
 
-      width: 24px;
-      height: 2px;
+      width:
+        24px;
+
+      height:
+        2px;
 
       background:
         var(--gold);
     }
 
+
     .footer-address-grid {
-      display: grid;
+      display:
+        grid;
 
       grid-template-columns:
         repeat(
@@ -840,34 +1160,47 @@
           minmax(0, 1fr)
         );
 
-      gap: 28px;
+      gap:
+        28px;
     }
+
 
     .footer-location {
       color:
         rgba(255, 255, 255, 0.76);
 
-      font-size: 14px;
+      font-size:
+        14px;
 
-      line-height: 1.7;
+      line-height:
+        1.7;
     }
+
 
     .footer-location strong {
-      display: block;
+      display:
+        block;
 
-      margin-bottom: 6px;
+      margin-bottom:
+        6px;
 
-      color: white;
+      color:
+        white;
 
-      font-size: 15px;
+      font-size:
+        15px;
 
-      font-weight: 700;
+      font-weight:
+        700;
     }
 
-    .footer-note {
-      margin-top: 26px;
 
-      padding-top: 17px;
+    .footer-note {
+      margin-top:
+        26px;
+
+      padding-top:
+        17px;
 
       border-top:
         1px solid
@@ -876,157 +1209,163 @@
       color:
         rgba(255, 255, 255, 0.60);
 
-      font-size: 13px;
+      font-size:
+        13px;
 
-      line-height: 1.7;
+      line-height:
+        1.7;
     }
+
+
+
+    /* =====================================
+       MOBILE
+    ===================================== */
 
     @media
     (max-width: 768px) {
 
       body {
         background:
+
           radial-gradient(
             circle at 15% 8%,
-            rgba(176, 210, 198, 0.68),
-            transparent 30%
+            rgba(176, 210, 198, 0.72),
+            transparent 31%
           ),
+
           radial-gradient(
             circle at 90% 16%,
-            rgba(232, 217, 182, 0.64),
-            transparent 27%
-          ),
-          radial-gradient(
-            circle at 18% 88%,
-            rgba(221, 182, 174, 0.46),
+            rgba(232, 217, 182, 0.68),
             transparent 28%
           ),
+
+          radial-gradient(
+            circle at 18% 88%,
+            rgba(221, 182, 174, 0.50),
+            transparent 29%
+          ),
+
           radial-gradient(
             circle at 86% 68%,
-            rgba(176, 210, 198, 0.38),
-            transparent 26%
+            rgba(176, 210, 198, 0.42),
+            transparent 27%
           ),
+
           linear-gradient(
             180deg,
             #f6f2ea 0%,
-            #f0ebe1 48%,
-            #ece5d8 100%
+            #efe9de 48%,
+            #eae2d5 100%
           );
       }
 
-      .bg-blob-1 {
-        width: 360px;
-        height: 360px;
-
-        top: -80px;
-        right: -120px;
-
-        filter:
-          blur(80px);
-      }
-
-      .bg-blob-2 {
-        width: 300px;
-        height: 300px;
-
-        top: 48%;
-        right: -140px;
-
-        filter:
-          blur(80px);
-      }
-
-      .bg-blob-3 {
-        width: 310px;
-        height: 310px;
-
-        left: -120px;
-        bottom: -90px;
-
-        filter:
-          blur(80px);
-      }
 
       .page {
         width:
-          calc(
-            100% - 22px
-          );
+          calc(100% - 22px);
 
         padding:
           34px 0
           46px;
       }
 
+
       .brand {
-        margin-bottom: 46px;
+        margin-bottom:
+          46px;
       }
+
 
       .brand-top {
-        font-size: 9px;
-
-        letter-spacing:
-          1.9px;
+        font-size:
+          9px;
       }
 
+
       .brand h1 {
-        font-size: 48px;
+        font-size:
+          48px;
 
         letter-spacing:
           -2px;
       }
 
+
       .brand-description {
-        max-width: 360px;
+        max-width:
+          360px;
 
-        font-size: 15px;
-
-        line-height: 1.65;
+        font-size:
+          15px;
       }
+
 
       .intro {
-        display: block;
+        display:
+          block;
 
-        margin-bottom: 24px;
+        margin-bottom:
+          24px;
       }
+
 
       .intro h2 {
-        font-size: 33px;
+        font-size:
+          33px;
       }
+
 
       .intro-text {
-        max-width: 100%;
+        max-width:
+          100%;
 
-        margin-top: 12px;
+        margin-top:
+          12px;
 
-        text-align: left;
+        text-align:
+          left;
 
-        font-size: 14px;
+        font-size:
+          14px;
       }
+
 
       .category {
-        margin-bottom: 24px;
+        margin-bottom:
+          24px;
       }
+
 
       .category-image-wrapper {
-        height: 165px;
+        height:
+          165px;
       }
+
 
       .category-heading {
-        left: 18px;
-        right: 18px;
-        bottom: 16px;
+        left:
+          18px;
+
+        right:
+          18px;
+
+        bottom:
+          16px;
       }
+
 
       .category-number {
-        font-size: 10px;
+        font-size:
+          10px;
       }
+
 
       .category-title {
-        font-size: 24px;
-
-        line-height: 1.16;
+        font-size:
+          24px;
       }
+
 
       .category-no-image {
         padding:
@@ -1034,102 +1373,96 @@
           18px;
       }
 
+
       .services {
         padding:
           6px
           18px;
       }
 
+
       .service {
         padding:
           19px 0;
       }
 
-      /*
-      ===================================
-      MOBILE LAYOUT
-      ===================================
 
-      Harga TETAP di kanan.
-      Nama layanan yang wrap.
+      /*
+      MOBILE:
+      kolom harga fixed 165px.
+
+      Artinya semua:
+      Rp 50.000
+      Rp 350.000
+      Rp 150.000 - 300.000
+
+      memiliki right edge yang sama.
       */
 
       .service-header {
-        display: grid;
-
         grid-template-columns:
           minmax(0, 1fr)
-          148px;
+          165px;
 
-        gap: 12px;
-
-        align-items: start;
+        column-gap:
+          12px;
       }
 
-      .service-main {
-        min-width: 0;
-      }
 
       .service-name {
-        font-size: 18px;
+        font-size:
+          17px;
 
-        line-height: 1.38;
-
-        white-space: normal;
-
-        overflow-wrap: break-word;
-
-        word-break: normal;
+        line-height:
+          1.42;
       }
+
 
       .service-note {
-        font-size: 14px;
-
-        line-height: 1.58;
+        font-size:
+          13px;
       }
+
 
       .service-price {
-        font-size: 15px;
+        width:
+          165px;
 
-        text-align: right;
+        font-size:
+          14px;
 
-        white-space: nowrap;
+        text-align:
+          right;
 
-        padding-top: 1px;
+        white-space:
+          nowrap;
       }
 
-      .service-price::after {
-        display: inline;
-      }
 
       .service-details {
-        margin-top: 14px;
+        margin-top:
+          14px;
 
-        padding-top: 14px;
+        padding-top:
+          14px;
       }
 
-      .detail-item {
-        grid-template-columns:
-          10px
-          minmax(0, 1fr);
-
-        gap: 10px;
-
-        margin-bottom: 14px;
-      }
 
       .detail-title {
-        font-size: 15px;
+        font-size:
+          15px;
       }
+
 
       .detail-description {
-        font-size: 13px;
-
-        line-height: 1.58;
+        font-size:
+          13px;
       }
 
+
       .addon-section {
-        margin-top: 16px;
+        margin-top:
+          16px;
 
         padding:
           14px
@@ -1138,94 +1471,75 @@
           12px;
       }
 
-      .addon-label {
-        font-size: 12px;
 
-        margin-bottom: 10px;
+      .addon-label {
+        font-size:
+          12px;
       }
+
 
       .addon-item {
-        display: grid;
-
         grid-template-columns:
           minmax(0, 1fr)
-          148px;
+          165px;
 
-        gap: 12px;
-
-        align-items: start;
-
-        padding:
-          12px 0;
+        column-gap:
+          12px;
       }
 
-      .addon-info {
-        min-width: 0;
-      }
 
       .addon-title {
-        font-size: 14px;
-
-        line-height: 1.45;
-
-        white-space: normal;
-
-        overflow-wrap: break-word;
-
-        word-break: normal;
+        font-size:
+          14px;
       }
+
 
       .addon-description {
-        font-size: 13px;
-
-        line-height: 1.58;
+        font-size:
+          13px;
       }
+
 
       .addon-price {
-        font-size: 15px;
+        width:
+          165px;
 
-        text-align: right;
+        font-size:
+          14px;
 
-        white-space: nowrap;
+        text-align:
+          right;
 
-        padding-top: 1px;
+        white-space:
+          nowrap;
       }
 
-      .addon-price::after {
-        display: inline;
-      }
 
       footer {
-        margin-top: 42px;
+        margin-top:
+          42px;
 
         padding:
           24px
           18px;
       }
 
-      .footer-brand {
-        font-size: 24px;
-      }
 
       .footer-address-grid {
         grid-template-columns:
           1fr;
 
-        gap: 18px;
+        gap:
+          18px;
       }
 
-      .footer-location {
-        font-size: 13px;
-      }
-
-      .footer-location strong {
-        font-size: 14px;
-      }
-
-      .footer-note {
-        font-size: 12px;
-      }
     }
+
+
+
+    /*
+    HP LEBIH KECIL
+    */
 
     @media
     (max-width: 430px) {
@@ -1233,27 +1547,104 @@
       .service-header {
         grid-template-columns:
           minmax(0, 1fr)
-          140px;
+          158px;
       }
+
+
+      .service-price {
+        width:
+          158px;
+
+        font-size:
+          13.5px;
+      }
+
 
       .addon-item {
         grid-template-columns:
           minmax(0, 1fr)
-          140px;
+          158px;
       }
+
+
+      .addon-price {
+        width:
+          158px;
+
+        font-size:
+          13.5px;
+      }
+
+    }
+
+
+
+    /*
+    HP SANGAT KECIL
+
+    Harga TETAP kanan.
+    Tidak diturunkan.
+    */
+
+    @media
+    (max-width: 360px) {
+
+      .services {
+        padding:
+          5px
+          14px;
+      }
+
+
+      .service-header {
+        grid-template-columns:
+          minmax(0, 1fr)
+          148px;
+
+        column-gap:
+          9px;
+      }
+
 
       .service-name {
-        font-size: 17px;
+        font-size:
+          16px;
       }
 
-      .service-price,
-      .addon-price {
-        font-size: 14px;
+
+      .service-price {
+        width:
+          148px;
+
+        font-size:
+          12.5px;
       }
+
+
+      .addon-item {
+        grid-template-columns:
+          minmax(0, 1fr)
+          148px;
+
+        column-gap:
+          9px;
+      }
+
+
+      .addon-price {
+        width:
+          148px;
+
+        font-size:
+          12.5px;
+      }
+
     }
 
   </style>
+
 </head>
+
 
 <body>
 
@@ -1261,7 +1652,9 @@
   <div class="bg-blob bg-blob-2"></div>
   <div class="bg-blob bg-blob-3"></div>
 
+
   <main class="page">
+
 
     <header class="brand">
 
@@ -1281,6 +1674,8 @@
 
     </header>
 
+
+
     <section class="intro">
 
       <div>
@@ -1295,6 +1690,7 @@
 
       </div>
 
+
       <p class="intro-text">
         Harga layanan dapat berbeda
         menyesuaikan kebutuhan dan
@@ -1302,6 +1698,8 @@
       </p>
 
     </section>
+
+
 
     <div id="content">
 
@@ -1315,17 +1713,22 @@
 
     </div>
 
+
+
     <footer>
 
       <div class="footer-brand">
         Eva Salon
       </div>
 
+
       <div class="footer-label">
         Lokasi Kami
       </div>
 
+
       <div class="footer-address-grid">
+
 
         <div class="footer-location">
 
@@ -1337,6 +1740,7 @@
           Perumnas 3, Bekasi Timur
 
         </div>
+
 
         <div class="footer-location">
 
@@ -1350,7 +1754,9 @@
 
         </div>
 
+
       </div>
+
 
       <div class="footer-note">
 
@@ -1365,12 +1771,16 @@
 
     </footer>
 
+
   </main>
+
+
 
   <script>
 
     const API_URL =
       'https://script.google.com/macros/s/AKfycbwRcpPFRXnySce9fhF7-FZEzJ85PuA6jiGU0SOmYIP8a12PR1XGUylHLuGGdhq3GrPF/exec';
+
 
 
     function formatPrice(price) {
@@ -1404,18 +1814,14 @@
         /^\d+$/.test(value)
       ) {
 
-        const formatted =
+        return (
+          'Rp ' +
           new Intl.NumberFormat(
             'id-ID'
           )
           .format(
             Number(value)
-          );
-
-
-        return (
-          'Rp ' +
-          formatted
+          )
         );
 
       }
@@ -1469,6 +1875,7 @@
     }
 
 
+
     function escapeHTML(value) {
 
       const div =
@@ -1487,6 +1894,7 @@
       return div.innerHTML;
 
     }
+
 
 
     function loadEvaSalonData(response) {
@@ -1515,6 +1923,7 @@
     }
 
 
+
     function renderPriceList(categories) {
 
       const container =
@@ -1531,9 +1940,7 @@
         container.innerHTML = `
 
           <div class="error">
-
             Belum ada layanan yang tersedia.
-
           </div>
 
         `;
@@ -1555,9 +1962,7 @@
 
 
           html += `
-
             <section class="category">
-
           `;
 
 
@@ -1570,7 +1975,6 @@
               >
 
                 <img
-
                   class="category-image"
 
                   src="${
@@ -1586,7 +1990,6 @@
                   }"
 
                   loading="lazy"
-
                 >
 
 
@@ -1594,11 +1997,9 @@
                   class="category-heading"
                 >
 
-
                   <div
                     class="category-number"
                   >
-
                     ${
                       String(
                         categoryIndex + 1
@@ -1608,25 +2009,20 @@
                         '0'
                       )
                     }
-
                   </div>
 
 
                   <h3
                     class="category-title"
                   >
-
                     ${
                       escapeHTML(
                         category.name
                       )
                     }
-
                   </h3>
 
-
                 </div>
-
 
               </div>
 
@@ -1642,11 +2038,9 @@
                 class="category-no-image"
               >
 
-
                 <div
                   class="category-number"
                 >
-
                   ${
                     String(
                       categoryIndex + 1
@@ -1656,22 +2050,18 @@
                       '0'
                     )
                   }
-
                 </div>
 
 
                 <h3
                   class="category-title"
                 >
-
                   ${
                     escapeHTML(
                       category.name
                     )
                   }
-
                 </h3>
-
 
               </div>
 
@@ -1681,9 +2071,7 @@
 
 
           html += `
-
             <div class="services">
-
           `;
 
 
@@ -1740,13 +2128,11 @@
                         <div
                           class="service-name"
                         >
-
                           ${
                             escapeHTML(
                               service.service
                             )
                           }
-
                         </div>
 
 
@@ -1756,19 +2142,15 @@
                           ?
 
                           `
-
                             <div
                               class="service-note"
                             >
-
                               ${
                                 escapeHTML(
                                   service.note
                                 )
                               }
-
                             </div>
-
                           `
 
                           :
@@ -1786,11 +2168,9 @@
                         ?
 
                         `
-
                           <div
                             class="service-price"
                           >
-
                             ${
                               escapeHTML(
                                 formatPrice(
@@ -1798,9 +2178,7 @@
                                 )
                               )
                             }
-
                           </div>
-
                         `
 
                         :
@@ -1823,7 +2201,6 @@
                           class="service-details"
                         >
 
-
                           ${
                             features
                               .map(
@@ -1832,7 +2209,6 @@
                                   <div
                                     class="detail-item"
                                   >
-
 
                                     <div
                                       class="detail-dot"
@@ -1843,17 +2219,14 @@
 
                                     <div>
 
-
                                       <div
                                         class="detail-title"
                                       >
-
                                         ${
                                           escapeHTML(
                                             item.title
                                           )
                                         }
-
                                       </div>
 
 
@@ -1863,19 +2236,15 @@
                                         ?
 
                                         `
-
                                           <div
                                             class="detail-description"
                                           >
-
                                             ${
                                               escapeHTML(
                                                 item.description
                                               )
                                             }
-
                                           </div>
-
                                         `
 
                                         :
@@ -1883,9 +2252,7 @@
                                         ''
                                       }
 
-
                                     </div>
-
 
                                   </div>
 
@@ -1893,7 +2260,6 @@
                               )
                               .join('')
                           }
-
 
                         </div>
 
@@ -1916,13 +2282,10 @@
                           class="addon-section"
                         >
 
-
                           <div
                             class="addon-label"
                           >
-
                             Add-on
-
                           </div>
 
 
@@ -1935,22 +2298,18 @@
                                     class="addon-item"
                                   >
 
-
                                     <div
                                       class="addon-info"
                                     >
 
-
                                       <div
                                         class="addon-title"
                                       >
-
                                         + ${
                                           escapeHTML(
                                             item.title
                                           )
                                         }
-
                                       </div>
 
 
@@ -1960,26 +2319,21 @@
                                         ?
 
                                         `
-
                                           <div
                                             class="addon-description"
                                           >
-
                                             ${
                                               escapeHTML(
                                                 item.description
                                               )
                                             }
-
                                           </div>
-
                                         `
 
                                         :
 
                                         ''
                                       }
-
 
                                     </div>
 
@@ -1990,11 +2344,9 @@
                                       ?
 
                                       `
-
                                         <div
                                           class="addon-price"
                                         >
-
                                           ${
                                             escapeHTML(
                                               formatPrice(
@@ -2002,9 +2354,7 @@
                                               )
                                             )
                                           }
-
                                         </div>
-
                                       `
 
                                       :
@@ -2012,14 +2362,12 @@
                                       ''
                                     }
 
-
                                   </div>
 
                                 `
                               )
                               .join('')
                           }
-
 
                         </div>
 
@@ -2035,19 +2383,14 @@
 
                 `;
 
-
               }
             );
 
 
           html += `
-
               </div>
-
             </section>
-
           `;
-
 
         }
       );
@@ -2057,6 +2400,7 @@
         html;
 
     }
+
 
 
     function showError(message) {
@@ -2085,6 +2429,7 @@
         `;
 
     }
+
 
 
     function loadData() {
