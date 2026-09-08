@@ -15,12 +15,10 @@
     content="Daftar harga layanan Eva Salon Hair & Skin Care Bekasi."
   >
 
-  <title>
-    Eva Salon - Price List
-  </title>
+  <title>Eva Salon - Price List</title>
 
 
-  <!-- GOOGLE FONT -->
+  <!-- FONT: SATU FONT UNTUK SEMUA -->
 
   <link
     rel="preconnect"
@@ -34,7 +32,7 @@
   >
 
   <link
-    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Cormorant+Garamond:wght@500;600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap"
     rel="stylesheet"
   >
 
@@ -44,62 +42,60 @@
     :root {
 
       --background:
-        #f3f0e9;
+        #f3f0e8;
 
       --surface:
-        #f8f5ef;
+        rgba(250, 248, 242, 0.93);
 
-      --surface-dark:
-        #173a34;
+      --surface-solid:
+        #faf8f2;
+
+      --dark-green:
+        #173d35;
+
+      --dark-green-soft:
+        #245047;
 
       --text:
-        #1c2b27;
+        #18312b;
 
       --muted:
-        #6f756f;
+        #66736e;
 
       --gold:
-        #b79a64;
+        #b5904f;
 
-      --red:
-        #a85757;
+      --gold-soft:
+        #e5d5af;
+
+      --blush:
+        #d8aaa1;
+
+      --mint:
+        #aaccc1;
 
       --line:
-        rgba(
-          28,
-          43,
-          39,
-          0.12
-        );
+        rgba(24, 49, 43, 0.13);
 
       --shadow:
-        0 18px 50px
-        rgba(
-          35,
-          42,
-          38,
-          0.06
-        );
+        0 20px 55px
+        rgba(25, 45, 39, 0.07);
 
     }
 
 
 
-    /*
-    ========================================
-    RESET
-    ========================================
-    */
+    /* ===================================
+       RESET
+    =================================== */
 
     * {
-      box-sizing:
-        border-box;
+      box-sizing: border-box;
     }
 
 
     html {
-      scroll-behavior:
-        smooth;
+      scroll-behavior: smooth;
     }
 
 
@@ -107,65 +103,167 @@
 
       margin: 0;
 
-      min-height:
-        100vh;
+      min-height: 100vh;
 
-      background:
+      overflow-x: hidden;
 
-        radial-gradient(
-          circle at top right,
-          rgba(
-            185,
-            214,
-            203,
-            0.17
-          ),
-          transparent 30%
-        ),
+      position: relative;
 
-        var(--background);
-
-      color:
-        var(--text);
+      color: var(--text);
 
       font-family:
         "DM Sans",
         sans-serif;
 
+      background:
+        var(--background);
+
     }
 
 
 
-    /*
-    ========================================
-    PAGE
-    ========================================
-    */
+    /* ===================================
+       BACKGROUND DECORATION
+    =================================== */
+
+    body::before {
+
+      content: "";
+
+      position: fixed;
+
+      z-index: -2;
+
+      width: 650px;
+      height: 650px;
+
+      top: -230px;
+      right: -260px;
+
+      border-radius: 50%;
+
+      background:
+        rgba(170, 204, 193, 0.40);
+
+      filter:
+        blur(105px);
+
+      pointer-events: none;
+
+    }
+
+
+    body::after {
+
+      content: "";
+
+      position: fixed;
+
+      z-index: -2;
+
+      width: 570px;
+      height: 570px;
+
+      left: -260px;
+      bottom: -240px;
+
+      border-radius: 50%;
+
+      background:
+        rgba(216, 170, 161, 0.23);
+
+      filter:
+        blur(120px);
+
+      pointer-events: none;
+
+    }
+
+
+    .background-gold {
+
+      position: fixed;
+
+      z-index: -2;
+
+      width: 430px;
+      height: 430px;
+
+      top: 43%;
+      right: -260px;
+
+      border-radius: 50%;
+
+      background:
+        rgba(229, 213, 175, 0.32);
+
+      filter:
+        blur(100px);
+
+      pointer-events: none;
+
+    }
+
+
+    .background-texture {
+
+      position: fixed;
+
+      z-index: -1;
+
+      inset: 0;
+
+      opacity: 0.21;
+
+      pointer-events: none;
+
+      background-image:
+
+        linear-gradient(
+          120deg,
+          rgba(255,255,255,0.3) 1px,
+          transparent 1px
+        ),
+
+        linear-gradient(
+          30deg,
+          rgba(24,49,43,0.025) 1px,
+          transparent 1px
+        );
+
+      background-size:
+        48px 48px,
+        64px 64px;
+
+    }
+
+
+
+    /* ===================================
+       MAIN PAGE
+    =================================== */
 
     .page {
 
       width:
         min(
-          720px,
-          calc(100% - 32px)
+          780px,
+          calc(100% - 34px)
         );
 
-      margin:
-        0 auto;
+      margin: 0 auto;
 
       padding:
-        55px 0
-        70px;
+        58px 0
+        72px;
 
     }
 
 
 
-    /*
-    ========================================
-    BRAND
-    ========================================
-    */
+    /* ===================================
+       HEADER
+    =================================== */
 
     .brand {
 
@@ -177,29 +275,26 @@
 
     .brand-top {
 
-      display:
-        flex;
+      display: flex;
 
-      align-items:
-        center;
+      align-items: center;
 
-      gap:
-        13px;
+      gap: 13px;
 
       margin-bottom:
-        24px;
+        22px;
 
       color:
         var(--muted);
 
       font-size:
-        9px;
+        11px;
 
       font-weight:
-        600;
+        700;
 
       letter-spacing:
-        2.5px;
+        2.3px;
 
       text-transform:
         uppercase;
@@ -209,20 +304,19 @@
 
     .brand-top::before {
 
-      content:
-        "";
+      content: "";
 
       width:
         36px;
 
       height:
-        1px;
-
-      flex-shrink:
-        0;
+        2px;
 
       background:
         var(--gold);
+
+      flex-shrink:
+        0;
 
     }
 
@@ -231,25 +325,24 @@
 
       margin: 0;
 
-      font-family:
-        "Cormorant Garamond",
-        serif;
-
       font-size:
         clamp(
           54px,
-          10vw,
-          82px
+          9vw,
+          76px
         );
 
       font-weight:
-        600;
+        700;
 
       letter-spacing:
-        -2px;
+        -3px;
 
       line-height:
-        0.9;
+        0.98;
+
+      color:
+        var(--dark-green);
 
     }
 
@@ -257,29 +350,27 @@
     .brand-description {
 
       max-width:
-        460px;
+        520px;
 
       margin-top:
-        22px;
+        25px;
 
       color:
         var(--muted);
 
       font-size:
-        14px;
+        17px;
 
       line-height:
-        1.75;
+        1.7;
 
     }
 
 
 
-    /*
-    ========================================
-    INTRO
-    ========================================
-    */
+    /* ===================================
+       INTRO
+    =================================== */
 
     .intro {
 
@@ -290,13 +381,13 @@
         space-between;
 
       align-items:
-        end;
+        flex-end;
 
       gap:
-        24px;
+        30px;
 
       margin-bottom:
-        31px;
+        30px;
 
     }
 
@@ -310,42 +401,38 @@
         center;
 
       gap:
-        11px;
+        10px;
 
       margin-bottom:
-        9px;
+        11px;
 
       color:
         var(--muted);
 
       font-size:
-        9px;
+        11px;
 
       font-weight:
-        600;
-
-      text-transform:
-        uppercase;
+        700;
 
       letter-spacing:
         2px;
+
+      text-transform:
+        uppercase;
 
     }
 
 
     .intro-label::before {
 
-      content:
-        "";
+      content: "";
 
       width:
-        30px;
+        28px;
 
       height:
-        1px;
-
-      flex-shrink:
-        0;
+        2px;
 
       background:
         var(--gold);
@@ -357,15 +444,14 @@
 
       margin: 0;
 
-      font-family:
-        "Cormorant Garamond",
-        serif;
-
       font-size:
-        46px;
+        40px;
 
       font-weight:
-        600;
+        700;
+
+      letter-spacing:
+        -1.5px;
 
       line-height:
         1;
@@ -376,13 +462,13 @@
     .intro-text {
 
       max-width:
-        270px;
+        285px;
 
       color:
         var(--muted);
 
       font-size:
-        12px;
+        15px;
 
       line-height:
         1.65;
@@ -394,28 +480,24 @@
 
 
 
-    /*
-    ========================================
-    CATEGORY
-    ========================================
-    */
+    /* ===================================
+       CATEGORY
+    =================================== */
 
     .category {
 
       margin-bottom:
-        42px;
+        38px;
 
       overflow:
         hidden;
 
       border:
         1px solid
-        rgba(
-          28,
-          43,
-          39,
-          0.08
-        );
+        rgba(24, 49, 43, 0.08);
+
+      border-radius:
+        4px;
 
       background:
         var(--surface);
@@ -423,8 +505,14 @@
       box-shadow:
         var(--shadow);
 
+      backdrop-filter:
+        blur(12px);
+
     }
 
+
+
+    /* CATEGORY IMAGE */
 
     .category-image-wrapper {
 
@@ -441,7 +529,7 @@
         hidden;
 
       background:
-        #ddd8ce;
+        var(--dark-green);
 
     }
 
@@ -465,8 +553,7 @@
 
     .category-image-wrapper::after {
 
-      content:
-        "";
+      content: "";
 
       position:
         absolute;
@@ -475,22 +562,10 @@
         0;
 
       background:
-
         linear-gradient(
           to top,
-          rgba(
-            12,
-            28,
-            24,
-            0.76
-          ),
-          rgba(
-            12,
-            28,
-            24,
-            0.03
-          )
-          65%
+          rgba(9, 36, 30, 0.82),
+          rgba(9, 36, 30, 0.05) 70%
         );
 
       pointer-events:
@@ -508,13 +583,13 @@
         2;
 
       left:
-        27px;
+        31px;
 
       right:
-        27px;
+        31px;
 
       bottom:
-        24px;
+        26px;
 
       color:
         white;
@@ -528,15 +603,13 @@
         8px;
 
       color:
-        rgba(
-          255,
-          255,
-          255,
-          0.68
-        );
+        rgba(255,255,255,0.70);
 
       font-size:
-        9px;
+        11px;
+
+      font-weight:
+        600;
 
       letter-spacing:
         2px;
@@ -548,39 +621,46 @@
 
       margin: 0;
 
-      font-family:
-        "Cormorant Garamond",
-        serif;
-
       font-size:
-        40px;
+        34px;
 
       font-weight:
-        600;
+        700;
+
+      letter-spacing:
+        -1px;
 
       line-height:
-        1;
+        1.1;
 
     }
 
 
 
-    /*
-    CATEGORY TANPA FOTO
-    */
+    /* CATEGORY TANPA GAMBAR */
 
     .category-no-image {
 
       padding:
-        33px
-        28px
-        28px;
+        34px
+        31px;
 
       color:
         white;
 
       background:
-        var(--surface-dark);
+
+        radial-gradient(
+          circle at right top,
+          rgba(181, 144, 79, 0.18),
+          transparent 40%
+        ),
+
+        linear-gradient(
+          135deg,
+          var(--dark-green),
+          #12322c
+        );
 
     }
 
@@ -595,41 +675,23 @@
 
 
 
-    /*
-    ========================================
-    SERVICE LIST
-    ========================================
-    */
+    /* ===================================
+       SERVICES
+    =================================== */
 
     .services {
 
       padding:
-        5px
-        27px;
+        8px
+        31px;
 
     }
 
 
     .service {
 
-      display:
-        grid;
-
-      grid-template-columns:
-        minmax(
-          0,
-          1fr
-        )
-        auto;
-
-      gap:
-        25px;
-
-      align-items:
-        start;
-
       padding:
-        23px 0;
+        25px 0;
 
       border-bottom:
         1px solid
@@ -646,6 +708,32 @@
     }
 
 
+
+    /* SERVICE HEADER
+
+       Dibuat terpisah supaya harga
+       service dan add-on punya
+       posisi kanan yang sama.
+    */
+
+    .service-header {
+
+      display:
+        grid;
+
+      grid-template-columns:
+        minmax(0, 1fr)
+        auto;
+
+      gap:
+        28px;
+
+      align-items:
+        start;
+
+    }
+
+
     .service-main {
 
       min-width:
@@ -656,41 +744,37 @@
 
     .service-name {
 
-      font-family:
-        "Cormorant Garamond",
-        serif;
+      color:
+        var(--text);
 
       font-size:
-        30px;
+        24px;
 
       font-weight:
         600;
 
       line-height:
-        1.15;
+        1.3;
 
     }
 
 
     .service-note {
 
-      display:
-        block;
+      margin-top:
+        7px;
 
       max-width:
-        400px;
-
-      margin-top:
-        6px;
+        470px;
 
       color:
         var(--muted);
 
       font-size:
-        20px;
+        15px;
 
       line-height:
-        1.55;
+        1.6;
 
     }
 
@@ -698,19 +782,22 @@
     .service-price {
 
       padding-top:
-        4px;
-
-      text-align:
-        right;
+        1px;
 
       color:
         var(--text);
 
       font-size:
-        20px;
+        18px;
 
       font-weight:
-        600;
+        700;
+
+      line-height:
+        1.4;
+
+      text-align:
+        right;
 
       white-space:
         nowrap;
@@ -724,28 +811,26 @@
         " —";
 
       margin-left:
-        5px;
+        7px;
 
       color:
-        var(--red);
+        var(--gold);
 
     }
 
 
 
-    /*
-    ========================================
-    SERVICE FEATURES
-    ========================================
-    */
+    /* ===================================
+       INCLUDED FEATURES
+    =================================== */
 
     .service-details {
 
       margin-top:
-        16px;
+        20px;
 
       padding-top:
-        14px;
+        19px;
 
       border-top:
         1px solid
@@ -757,16 +842,17 @@
     .detail-item {
 
       display:
-        flex;
+        grid;
 
-      align-items:
-        flex-start;
+      grid-template-columns:
+        8px
+        minmax(0, 1fr);
 
       gap:
-        9px;
+        12px;
 
       margin-bottom:
-        11px;
+        18px;
 
     }
 
@@ -781,28 +867,17 @@
 
     .detail-dot {
 
-      flex-shrink:
-        0;
-
-      margin-top:
-        -1px;
+      padding-top:
+        2px;
 
       color:
         var(--gold);
 
       font-size:
-        15px;
+        18px;
 
       line-height:
         1;
-
-    }
-
-
-    .detail-content {
-
-      min-width:
-        0;
 
     }
 
@@ -813,13 +888,13 @@
         var(--text);
 
       font-size:
-        18px;
+        17px;
 
       font-weight:
-        600;
+        700;
 
       line-height:
-        1.4;
+        1.45;
 
     }
 
@@ -827,49 +902,49 @@
     .detail-description {
 
       max-width:
-        400px;
+        520px;
 
       margin-top:
-        3px;
+        4px;
 
       color:
         var(--muted);
 
       font-size:
-        18px;
+        15px;
 
       line-height:
-        1.55;
+        1.6;
 
     }
 
 
 
-    /*
-    ========================================
-    ADD ON
-    ========================================
-    */
+    /* ===================================
+       ADD-ON
+    =================================== */
 
     .addon-section {
 
       margin-top:
-        17px;
+        22px;
 
       padding:
-        14px
-        15px;
+        20px
+        0
+        4px
+        18px;
 
       border-left:
         2px solid
         var(--gold);
 
       background:
-        rgba(
-          183,
-          154,
-          100,
-          0.07
+        linear-gradient(
+          90deg,
+          rgba(229, 213, 175, 0.20),
+          rgba(229, 213, 175, 0.04),
+          transparent
         );
 
     }
@@ -878,19 +953,19 @@
     .addon-label {
 
       margin-bottom:
-        9px;
+        13px;
 
       color:
         var(--gold);
 
       font-size:
-        18px;
+        14px;
 
       font-weight:
-        600;
+        700;
 
       letter-spacing:
-        1.8px;
+        2px;
 
       text-transform:
         uppercase;
@@ -898,22 +973,30 @@
     }
 
 
+
+    /* PENTING:
+       posisi harga add-on menggunakan
+       grid yang sama dengan service-header
+    */
+
     .addon-item {
 
       display:
-        flex;
+        grid;
 
-      justify-content:
-        space-between;
-
-      align-items:
-        flex-start;
+      grid-template-columns:
+        minmax(0, 1fr)
+        auto;
 
       gap:
-        20px;
+        28px;
+
+      align-items:
+        start;
 
       padding:
-        9px 0;
+        14px
+        0;
 
       border-bottom:
         1px solid
@@ -924,19 +1007,8 @@
 
     .addon-item:last-child {
 
-      padding-bottom:
-        0;
-
       border-bottom:
         none;
-
-    }
-
-
-    .addon-item:first-of-type {
-
-      padding-top:
-        0;
 
     }
 
@@ -955,13 +1027,13 @@
         var(--text);
 
       font-size:
-        11px;
+        16px;
 
       font-weight:
-        600;
+        700;
 
       line-height:
-        1.4;
+        1.45;
 
     }
 
@@ -969,36 +1041,42 @@
     .addon-description {
 
       max-width:
-        330px;
+        490px;
 
       margin-top:
-        3px;
+        4px;
 
       color:
         var(--muted);
 
       font-size:
-        20px;
+        15px;
 
       line-height:
-        1.5;
+        1.6;
 
     }
 
 
     .addon-price {
 
-      flex-shrink:
-        0;
+      padding-top:
+        1px;
 
       color:
         var(--text);
 
       font-size:
-        20px;
+        18px;
 
       font-weight:
-        600;
+        700;
+
+      line-height:
+        1.4;
+
+      text-align:
+        right;
 
       white-space:
         nowrap;
@@ -1006,17 +1084,29 @@
     }
 
 
+    .addon-price::after {
 
-    /*
-    ========================================
-    LOADING
-    ========================================
-    */
+      content:
+        " —";
+
+      margin-left:
+        7px;
+
+      color:
+        var(--gold);
+
+    }
+
+
+
+    /* ===================================
+       LOADING
+    =================================== */
 
     .loading {
 
       padding:
-        60px
+        65px
         20px;
 
       text-align:
@@ -1026,7 +1116,7 @@
         var(--muted);
 
       font-size:
-        12px;
+        16px;
 
     }
 
@@ -1034,23 +1124,18 @@
     .loader {
 
       width:
-        35px;
+        40px;
 
       height:
-        35px;
+        40px;
 
       margin:
         0 auto
-        15px;
+        17px;
 
       border:
-        1px solid
-        rgba(
-          183,
-          154,
-          100,
-          0.25
-        );
+        2px solid
+        rgba(181, 144, 79, 0.20);
 
       border-top-color:
         var(--gold);
@@ -1072,9 +1157,7 @@
       to {
 
         transform:
-          rotate(
-            360deg
-          );
+          rotate(360deg);
 
       }
 
@@ -1082,54 +1165,62 @@
 
 
 
-    /*
-    ========================================
-    ERROR
-    ========================================
-    */
+    /* ===================================
+       ERROR
+    =================================== */
 
     .error {
 
       padding:
-        20px;
+        24px;
 
       border:
         1px solid
-        #ead3d3;
+        rgba(168, 87, 87, 0.20);
+
+      border-radius:
+        3px;
 
       background:
-        #fff2f2;
+        rgba(255, 241, 241, 0.8);
 
       color:
-        #865e5e;
+        #7c4f4f;
 
       font-size:
-        12px;
+        16px;
 
       line-height:
-        1.6;
+        1.65;
 
     }
 
 
 
-    /*
-    ========================================
-    FOOTER
-    ========================================
-    */
+    /* ===================================
+       FOOTER
+    =================================== */
 
     footer {
 
       margin-top:
-        58px;
+        62px;
 
-      padding-top:
-        28px;
+      padding:
+        32px;
 
-      border-top:
+      border:
         1px solid
-        var(--line);
+        rgba(24,49,43,0.08);
+
+      background:
+        rgba(23, 61, 53, 0.96);
+
+      color:
+        white;
+
+      box-shadow:
+        var(--shadow);
 
     }
 
@@ -1137,23 +1228,16 @@
     .footer-brand {
 
       margin-bottom:
-        16px;
-
-      font-family:
-        "Cormorant Garamond",
-        serif;
-
-      color:
-        var(--text);
+        20px;
 
       font-size:
-        29px;
+        28px;
 
       font-weight:
-        600;
+        700;
 
-      line-height:
-        1;
+      letter-spacing:
+        -1px;
 
     }
 
@@ -1167,22 +1251,22 @@
         center;
 
       gap:
-        8px;
+        9px;
 
       margin-bottom:
-        14px;
+        17px;
 
       color:
-        var(--muted);
+        rgba(255,255,255,0.60);
 
       font-size:
-        8px;
+        11px;
 
       font-weight:
-        600;
+        700;
 
       letter-spacing:
-        1.7px;
+        1.8px;
 
       text-transform:
         uppercase;
@@ -1196,10 +1280,10 @@
         "";
 
       width:
-        22px;
+        25px;
 
       height:
-        1px;
+        2px;
 
       background:
         var(--gold);
@@ -1215,14 +1299,11 @@
       grid-template-columns:
         repeat(
           2,
-          minmax(
-            0,
-            1fr
-          )
+          minmax(0,1fr)
         );
 
       gap:
-        28px;
+        30px;
 
     }
 
@@ -1230,10 +1311,10 @@
     .footer-location {
 
       color:
-        var(--muted);
+        rgba(255,255,255,0.73);
 
       font-size:
-        10px;
+        14px;
 
       line-height:
         1.7;
@@ -1247,16 +1328,16 @@
         block;
 
       margin-bottom:
-        4px;
+        6px;
 
       color:
-        var(--text);
+        white;
 
       font-size:
-        10px;
+        15px;
 
       font-weight:
-        600;
+        700;
 
     }
 
@@ -1264,20 +1345,20 @@
     .footer-note {
 
       margin-top:
-        26px;
+        28px;
 
       padding-top:
-        16px;
+        18px;
 
       border-top:
         1px solid
-        var(--line);
+        rgba(255,255,255,0.12);
 
       color:
-        var(--muted);
+        rgba(255,255,255,0.58);
 
       font-size:
-        9px;
+        13px;
 
       line-height:
         1.7;
@@ -1286,11 +1367,9 @@
 
 
 
-    /*
-    ========================================
-    MOBILE
-    ========================================
-    */
+    /* ===================================
+       MOBILE
+    =================================== */
 
     @media
     (max-width: 600px) {
@@ -1299,12 +1378,12 @@
 
         width:
           calc(
-            100% - 26px
+            100% - 24px
           );
 
         padding:
-          37px 0
-          52px;
+          38px 0
+          48px;
 
       }
 
@@ -1312,7 +1391,7 @@
       .brand {
 
         margin-bottom:
-          53px;
+          52px;
 
       }
 
@@ -1320,7 +1399,7 @@
       .brand-top {
 
         font-size:
-          8px;
+          9px;
 
       }
 
@@ -1328,7 +1407,10 @@
       .brand h1 {
 
         font-size:
-          59px;
+          52px;
+
+        letter-spacing:
+          -2px;
 
       }
 
@@ -1336,10 +1418,10 @@
       .brand-description {
 
         max-width:
-          330px;
+          360px;
 
         font-size:
-          13px;
+          16px;
 
       }
 
@@ -1350,7 +1432,7 @@
           block;
 
         margin-bottom:
-          24px;
+          25px;
 
       }
 
@@ -1358,7 +1440,7 @@
       .intro h2 {
 
         font-size:
-          39px;
+          34px;
 
       }
 
@@ -1366,10 +1448,13 @@
       .intro-text {
 
         max-width:
-          330px;
+          360px;
 
         margin-top:
-          12px;
+          13px;
+
+        font-size:
+          14px;
 
         text-align:
           left;
@@ -1380,7 +1465,7 @@
       .category {
 
         margin-bottom:
-          29px;
+          28px;
 
       }
 
@@ -1396,13 +1481,13 @@
       .category-heading {
 
         left:
-          20px;
+          21px;
 
         right:
-          20px;
+          21px;
 
         bottom:
-          19px;
+          20px;
 
       }
 
@@ -1410,7 +1495,7 @@
       .category-title {
 
         font-size:
-          34px;
+          29px;
 
       }
 
@@ -1419,8 +1504,7 @@
 
         padding:
           27px
-          20px
-          23px;
+          21px;
 
       }
 
@@ -1428,26 +1512,24 @@
       .services {
 
         padding:
-          4px
-          19px;
+          5px
+          20px;
 
       }
 
 
       .service {
 
-        grid-template-columns:
-          minmax(
-            0,
-            1fr
-          )
-          auto;
+        padding:
+          23px 0;
+
+      }
+
+
+      .service-header {
 
         gap:
-          14px;
-
-        padding:
-          20px 0;
+          15px;
 
       }
 
@@ -1460,26 +1542,42 @@
       }
 
 
+      .service-note {
+
+        font-size:
+          14px;
+
+      }
+
+
       .service-price {
 
         font-size:
-          11px;
+          16px;
+
+      }
+
+
+      .detail-title {
+
+        font-size:
+          16px;
 
       }
 
 
       .detail-description {
 
-        max-width:
-          260px;
+        font-size:
+          14px;
 
       }
 
 
       .addon-section {
 
-        padding:
-          13px;
+        padding-left:
+          14px;
 
       }
 
@@ -1487,7 +1585,40 @@
       .addon-item {
 
         gap:
-          12px;
+          15px;
+
+      }
+
+
+      .addon-title {
+
+        font-size:
+          15px;
+
+      }
+
+
+      .addon-description {
+
+        font-size:
+          14px;
+
+      }
+
+
+      .addon-price {
+
+        font-size:
+          16px;
+
+      }
+
+
+      footer {
+
+        padding:
+          27px
+          22px;
 
       }
 
@@ -1498,7 +1629,7 @@
           1fr;
 
         gap:
-          17px;
+          20px;
 
       }
 
@@ -1506,14 +1637,14 @@
 
 
 
-    /*
-    VERY SMALL MOBILE
-    */
+    /* ===================================
+       VERY SMALL PHONE
+    =================================== */
 
     @media
     (max-width: 380px) {
 
-      .service {
+      .service-header {
 
         display:
           block;
@@ -1551,7 +1682,18 @@
       .addon-price {
 
         margin-top:
-          5px;
+          8px;
+
+        text-align:
+          left;
+
+      }
+
+
+      .addon-price::after {
+
+        display:
+          none;
 
       }
 
@@ -1566,12 +1708,18 @@
 <body>
 
 
+  <!-- BACKGROUND DECOR -->
+
+  <div class="background-gold"></div>
+
+  <div class="background-texture"></div>
+
+
+
   <main class="page">
 
 
-    <!-- =================================
-         HEADER
-    ================================== -->
+    <!-- HEADER -->
 
     <header class="brand">
 
@@ -1603,9 +1751,7 @@
 
 
 
-    <!-- =================================
-         PRICE LIST INTRO
-    ================================== -->
+    <!-- INTRO -->
 
     <section class="intro">
 
@@ -1643,9 +1789,7 @@
 
 
 
-    <!-- =================================
-         DATA GOOGLE SHEET
-    ================================== -->
+    <!-- GOOGLE SHEET DATA -->
 
     <div id="content">
 
@@ -1663,9 +1807,7 @@
 
 
 
-    <!-- =================================
-         FOOTER
-    ================================== -->
+    <!-- FOOTER -->
 
     <footer>
 
@@ -1737,11 +1879,9 @@
   <script>
 
     /*
-    ========================================
-    GOOGLE APPS SCRIPT API
-
-    URL SUDAH DIMASUKKAN
-    ========================================
+    ==========================================
+    APPS SCRIPT API
+    ==========================================
     */
 
     const API_URL =
@@ -1750,17 +1890,9 @@
 
 
     /*
-    ========================================
+    ==========================================
     FORMAT PRICE
-
-    SUPPORT:
-
-    50000
-    50.000
-    150000 - 300000
-    150.000 - 300.000
-    Rp 150.000 - 300.000
-    ========================================
+    ==========================================
     */
 
     function formatPrice(price) {
@@ -1789,7 +1921,7 @@
 
 
       /*
-      Kalau sudah pakai Rp
+      Sudah ada Rp
       */
 
       if (
@@ -1802,12 +1934,14 @@
 
 
       /*
-      Angka murni
+      Angka biasa:
+      150000
       */
 
       if (
         /^\d+$/.test(value)
       ) {
+
 
         const formatted =
           new Intl.NumberFormat(
@@ -1827,18 +1961,17 @@
 
 
       /*
-      RANGE ANGKA MURNI
-
+      Range angka:
       150000 - 300000
       */
 
-      const rangeMatch =
+      const range =
         value.match(
           /^(\d+)\s*[-–—]\s*(\d+)$/
         );
 
 
-      if (rangeMatch) {
+      if (range) {
 
 
         const min =
@@ -1847,7 +1980,7 @@
           )
           .format(
             Number(
-              rangeMatch[1]
+              range[1]
             )
           );
 
@@ -1858,7 +1991,7 @@
           )
           .format(
             Number(
-              rangeMatch[2]
+              range[2]
             )
           );
 
@@ -1874,7 +2007,7 @@
 
 
       /*
-      Kalau user sudah tulis
+      Contoh:
       150.000 - 300.000
       */
 
@@ -1888,9 +2021,9 @@
 
 
     /*
-    ========================================
-    ESCAPE HTML
-    ========================================
+    ==========================================
+    HTML SECURITY
+    ==========================================
     */
 
     function escapeHTML(value) {
@@ -1916,9 +2049,9 @@
 
 
     /*
-    ========================================
-    CALLBACK APPS SCRIPT
-    ========================================
+    ==========================================
+    CALLBACK
+    ==========================================
     */
 
     function loadEvaSalonData(response) {
@@ -1958,9 +2091,9 @@
 
 
     /*
-    ========================================
-    RENDER PRICE LIST
-    ========================================
+    ==========================================
+    RENDER
+    ==========================================
     */
 
     function renderPriceList(categories) {
@@ -2016,11 +2149,8 @@
 
 
           /*
-          =================================
           CATEGORY IMAGE
-          =================================
           */
-
 
           if (category.image) {
 
@@ -2148,13 +2278,6 @@
 
 
 
-          /*
-          =================================
-          SERVICES
-          =================================
-          */
-
-
           html += `
 
             <div class="services">
@@ -2204,260 +2327,83 @@
                   <article class="service">
 
 
-                    <div class="service-main">
+
+                    <!--
+                    SERVICE HEADER
+                    -->
+
+                    <div
+                      class="service-header"
+                    >
 
 
                       <div
-                        class="service-name"
+                        class="service-main"
                       >
 
+
+                        <div
+                          class="service-name"
+                        >
+
+                          ${
+                            escapeHTML(
+                              service.service
+                            )
+                          }
+
+                        </div>
+
+
                         ${
-                          escapeHTML(
-                            service.service
-                          )
+                          service.note
+
+                          ?
+
+                          `
+
+                            <div
+                              class="service-note"
+                            >
+
+                              ${
+                                escapeHTML(
+                                  service.note
+                                )
+                              }
+
+                            </div>
+
+                          `
+
+                          :
+
+                          ''
                         }
+
 
                       </div>
 
 
 
                       ${
-                        service.note
+                        service.price
+
                         ?
 
                         `
 
                           <div
-                            class="service-note"
+                            class="service-price"
                           >
 
                             ${
                               escapeHTML(
-                                service.note
+                                formatPrice(
+                                  service.price
+                                )
                               )
                             }
-
-                          </div>
-
-                        `
-
-                        :
-
-                        ''
-                      }
-
-
-
-                      ${
-                        features.length > 0
-
-                        ?
-
-                        `
-
-                          <div
-                            class="service-details"
-                          >
-
-                            ${
-                              features
-                                .map(
-                                  item => `
-
-                                    <div
-                                      class="detail-item"
-                                    >
-
-
-                                      <div
-                                        class="detail-dot"
-                                      >
-                                        •
-                                      </div>
-
-
-                                      <div
-                                        class="detail-content"
-                                      >
-
-
-                                        <div
-                                          class="detail-title"
-                                        >
-
-                                          ${
-                                            escapeHTML(
-                                              item.title
-                                            )
-                                          }
-
-                                        </div>
-
-
-                                        ${
-                                          item.description
-
-                                          ?
-
-                                          `
-
-                                            <div
-                                              class="detail-description"
-                                            >
-
-                                              ${
-                                                escapeHTML(
-                                                  item.description
-                                                )
-                                              }
-
-                                            </div>
-
-                                          `
-
-                                          :
-
-                                          ''
-                                        }
-
-
-                                      </div>
-
-
-                                    </div>
-
-                                  `
-                                )
-                                .join('')
-                            }
-
-                          </div>
-
-                        `
-
-                        :
-
-                        ''
-                      }
-
-
-
-                      ${
-                        addons.length > 0
-
-                        ?
-
-                        `
-
-                          <div
-                            class="addon-section"
-                          >
-
-
-                            <div
-                              class="addon-label"
-                            >
-
-                              Add-on
-
-                            </div>
-
-
-                            ${
-                              addons
-                                .map(
-                                  item => `
-
-                                    <div
-                                      class="addon-item"
-                                    >
-
-
-                                      <div
-                                        class="addon-info"
-                                      >
-
-
-                                        <div
-                                          class="addon-title"
-                                        >
-
-                                          + ${
-                                            escapeHTML(
-                                              item.title
-                                            )
-                                          }
-
-                                        </div>
-
-
-                                        ${
-                                          item.description
-
-                                          ?
-
-                                          `
-
-                                            <div
-                                              class="addon-description"
-                                            >
-
-                                              ${
-                                                escapeHTML(
-                                                  item.description
-                                                )
-                                              }
-
-                                            </div>
-
-                                          `
-
-                                          :
-
-                                          ''
-                                        }
-
-
-                                      </div>
-
-
-
-                                      ${
-                                        item.price
-
-                                        ?
-
-                                        `
-
-                                          <div
-                                            class="addon-price"
-                                          >
-
-                                            ${
-                                              escapeHTML(
-                                                formatPrice(
-                                                  item.price
-                                                )
-                                              )
-                                            }
-
-                                          </div>
-
-                                        `
-
-                                        :
-
-                                        ''
-                                      }
-
-
-                                    </div>
-
-                                  `
-                                )
-                                .join('')
-                            }
-
 
                           </div>
 
@@ -2473,24 +2419,224 @@
 
 
 
+                    <!--
+                    INCLUDED FEATURES
+                    -->
+
                     ${
-                      service.price
+                      features.length > 0
 
                       ?
 
                       `
 
                         <div
-                          class="service-price"
+                          class="service-details"
                         >
 
+
                           ${
-                            escapeHTML(
-                              formatPrice(
-                                service.price
+                            features
+                              .map(
+                                item => `
+
+                                  <div
+                                    class="detail-item"
+                                  >
+
+
+                                    <div
+                                      class="detail-dot"
+                                    >
+                                      •
+                                    </div>
+
+
+                                    <div>
+
+
+                                      <div
+                                        class="detail-title"
+                                      >
+
+                                        ${
+                                          escapeHTML(
+                                            item.title
+                                          )
+                                        }
+
+                                      </div>
+
+
+                                      ${
+                                        item.description
+
+                                        ?
+
+                                        `
+
+                                          <div
+                                            class="detail-description"
+                                          >
+
+                                            ${
+                                              escapeHTML(
+                                                item.description
+                                              )
+                                            }
+
+                                          </div>
+
+                                        `
+
+                                        :
+
+                                        ''
+                                      }
+
+
+                                    </div>
+
+
+                                  </div>
+
+                                `
                               )
-                            )
+                              .join('')
                           }
+
+
+                        </div>
+
+                      `
+
+                      :
+
+                      ''
+                    }
+
+
+
+                    <!--
+                    ADD ON
+                    -->
+
+                    ${
+                      addons.length > 0
+
+                      ?
+
+                      `
+
+                        <div
+                          class="addon-section"
+                        >
+
+
+                          <div
+                            class="addon-label"
+                          >
+
+                            Add-on
+
+                          </div>
+
+
+                          ${
+                            addons
+                              .map(
+                                item => `
+
+                                  <div
+                                    class="addon-item"
+                                  >
+
+
+                                    <div
+                                      class="addon-info"
+                                    >
+
+
+                                      <div
+                                        class="addon-title"
+                                      >
+
+                                        + ${
+                                          escapeHTML(
+                                            item.title
+                                          )
+                                        }
+
+                                      </div>
+
+
+                                      ${
+                                        item.description
+
+                                        ?
+
+                                        `
+
+                                          <div
+                                            class="addon-description"
+                                          >
+
+                                            ${
+                                              escapeHTML(
+                                                item.description
+                                              )
+                                            }
+
+                                          </div>
+
+                                        `
+
+                                        :
+
+                                        ''
+                                      }
+
+
+                                    </div>
+
+
+
+                                    ${
+                                      item.price
+
+                                      ?
+
+                                      `
+
+                                        <div
+                                          class="addon-price"
+                                        >
+
+                                          ${
+                                            escapeHTML(
+                                              formatPrice(
+                                                item.price
+                                              )
+                                            )
+                                          }
+
+                                        </div>
+
+                                      `
+
+                                      :
+
+                                      ''
+                                    }
+
+
+                                  </div>
+
+                                `
+                              )
+                              .join('')
+                          }
+
 
                         </div>
 
@@ -2534,9 +2680,9 @@
 
 
     /*
-    ========================================
+    ==========================================
     ERROR
-    ========================================
+    ==========================================
     */
 
     function showError(message) {
@@ -2571,9 +2717,9 @@
 
 
     /*
-    ========================================
-    LOAD DATA VIA JSONP
-    ========================================
+    ==========================================
+    LOAD JSONP
+    ==========================================
     */
 
     function loadData() {
@@ -2599,12 +2745,6 @@
         Date.now();
 
 
-      console.log(
-        'Loading API:',
-        script.src
-      );
-
-
       script.onerror =
         function () {
 
@@ -2626,18 +2766,9 @@
 
 
 
-    /*
-    CALLBACK HARUS GLOBAL
-    */
-
     window.loadEvaSalonData =
       loadEvaSalonData;
 
-
-
-    /*
-    START
-    */
 
     window.addEventListener(
       'DOMContentLoaded',
