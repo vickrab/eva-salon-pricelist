@@ -3,35 +3,40 @@
 
 <head>
   <meta charset="UTF-8">
+
   <meta
     name="viewport"
     content="width=device-width, initial-scale=1"
   >
+
   <meta
     name="description"
     content="Daftar harga layanan Eva Salon Hair & Skin Care Bekasi."
   >
+
   <title>Eva Salon - Price List</title>
 
   <link
     rel="preconnect"
     href="https://fonts.googleapis.com"
   >
+
   <link
     rel="preconnect"
     href="https://fonts.gstatic.com"
     crossorigin
   >
+
   <link
     href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap"
     rel="stylesheet"
   >
 
   <style>
+
     :root {
       --background: #f3efe7;
-      --surface: rgba(251, 249, 244, 0.92);
-      --surface-solid: #fbf9f4;
+      --surface: rgba(251, 249, 244, 0.93);
       --dark-green: #163d35;
       --dark-green-2: #214941;
       --text: #18312b;
@@ -57,68 +62,126 @@
       min-height: 100vh;
       overflow-x: hidden;
       position: relative;
+
       font-family: "DM Sans", sans-serif;
       color: var(--text);
+
       background:
-        radial-gradient(circle at 15% 12%, rgba(176, 210, 198, 0.55), transparent 26%),
-        radial-gradient(circle at 88% 14%, rgba(232, 217, 182, 0.50), transparent 24%),
-        radial-gradient(circle at 20% 85%, rgba(221, 182, 174, 0.36), transparent 26%),
-        radial-gradient(circle at 85% 78%, rgba(176, 210, 198, 0.28), transparent 22%),
-        linear-gradient(180deg, #f6f2ea 0%, #f1ede4 48%, #eee8dd 100%);
+        radial-gradient(
+          circle at 15% 12%,
+          rgba(176, 210, 198, 0.58),
+          transparent 28%
+        ),
+        radial-gradient(
+          circle at 88% 14%,
+          rgba(232, 217, 182, 0.55),
+          transparent 25%
+        ),
+        radial-gradient(
+          circle at 18% 87%,
+          rgba(221, 182, 174, 0.38),
+          transparent 27%
+        ),
+        radial-gradient(
+          circle at 84% 76%,
+          rgba(176, 210, 198, 0.32),
+          transparent 24%
+        ),
+        linear-gradient(
+          180deg,
+          #f6f2ea 0%,
+          #f1ece2 48%,
+          #ece5d8 100%
+        );
+
       background-attachment: fixed;
     }
 
     body::before {
       content: "";
+
       position: fixed;
       inset: 0;
+
       z-index: -1;
+
       pointer-events: none;
-      opacity: 0.22;
+
+      opacity: 0.18;
+
       background-image:
-        linear-gradient(rgba(255,255,255,0.45) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(24,49,43,0.03) 1px, transparent 1px);
-      background-size: 42px 42px, 42px 42px;
-      mask-image: linear-gradient(to bottom, rgba(0,0,0,0.9), rgba(0,0,0,0.65));
+        linear-gradient(
+          rgba(255, 255, 255, 0.40) 1px,
+          transparent 1px
+        ),
+        linear-gradient(
+          90deg,
+          rgba(24, 49, 43, 0.025) 1px,
+          transparent 1px
+        );
+
+      background-size:
+        44px 44px,
+        44px 44px;
     }
 
     .bg-blob {
       position: fixed;
-      border-radius: 50%;
-      filter: blur(110px);
+
       z-index: -2;
+
+      border-radius: 50%;
+
+      filter: blur(105px);
+
       pointer-events: none;
-      opacity: 0.95;
     }
 
     .bg-blob-1 {
       width: 520px;
       height: 520px;
+
       top: -150px;
-      right: -140px;
-      background: rgba(176, 210, 198, 0.55);
+      right: -150px;
+
+      background:
+        rgba(176, 210, 198, 0.58);
     }
 
     .bg-blob-2 {
-      width: 420px;
-      height: 420px;
+      width: 430px;
+      height: 430px;
+
       top: 42%;
-      right: -180px;
-      background: rgba(232, 217, 182, 0.45);
+      right: -190px;
+
+      background:
+        rgba(232, 217, 182, 0.48);
     }
 
     .bg-blob-3 {
-      width: 420px;
-      height: 420px;
-      left: -170px;
-      bottom: -140px;
-      background: rgba(221, 182, 174, 0.34);
+      width: 430px;
+      height: 430px;
+
+      left: -180px;
+      bottom: -150px;
+
+      background:
+        rgba(221, 182, 174, 0.36);
     }
 
     .page {
-      width: min(820px, calc(100% - 32px));
+      width:
+        min(
+          820px,
+          calc(100% - 32px)
+        );
+
       margin: 0 auto;
-      padding: 56px 0 72px;
+
+      padding:
+        56px 0
+        72px;
     }
 
     .brand {
@@ -128,164 +191,272 @@
     .brand-top {
       display: flex;
       align-items: center;
+
       gap: 12px;
+
       margin-bottom: 20px;
+
       color: var(--muted);
+
       font-size: 11px;
       font-weight: 700;
+
       letter-spacing: 2.2px;
+
       text-transform: uppercase;
     }
 
     .brand-top::before {
       content: "";
+
       width: 38px;
       height: 2px;
-      background: var(--gold);
+
       flex-shrink: 0;
+
+      background:
+        var(--gold);
     }
 
     .brand h1 {
       margin: 0;
-      font-size: clamp(52px, 8.5vw, 76px);
+
+      font-size:
+        clamp(
+          52px,
+          8.5vw,
+          76px
+        );
+
       font-weight: 700;
+
       letter-spacing: -3px;
+
       line-height: 0.98;
-      color: var(--dark-green);
+
+      color:
+        var(--dark-green);
     }
 
     .brand-description {
       max-width: 540px;
+
       margin-top: 22px;
-      color: var(--muted);
+
+      color:
+        var(--muted);
+
       font-size: 17px;
+
       line-height: 1.7;
     }
 
     .intro {
       display: flex;
+
       justify-content: space-between;
       align-items: flex-end;
+
       gap: 28px;
+
       margin-bottom: 28px;
     }
 
     .intro-label {
       display: flex;
       align-items: center;
+
       gap: 10px;
+
       margin-bottom: 10px;
-      color: var(--muted);
+
+      color:
+        var(--muted);
+
       font-size: 11px;
       font-weight: 700;
+
       letter-spacing: 2px;
+
       text-transform: uppercase;
     }
 
     .intro-label::before {
       content: "";
+
       width: 28px;
       height: 2px;
-      background: var(--gold);
+
+      background:
+        var(--gold);
     }
 
     .intro h2 {
       margin: 0;
+
       font-size: 40px;
+
       font-weight: 700;
+
       letter-spacing: -1.4px;
+
       line-height: 1;
-      color: var(--text);
+
+      color:
+        var(--text);
     }
 
     .intro-text {
       max-width: 300px;
-      color: var(--muted);
+
+      color:
+        var(--muted);
+
       font-size: 15px;
+
       line-height: 1.65;
+
       text-align: right;
     }
 
     .category {
       margin-bottom: 34px;
+
       overflow: hidden;
-      border: 1px solid rgba(24, 49, 43, 0.08);
+
+      border:
+        1px solid
+        rgba(24, 49, 43, 0.08);
+
       border-radius: 6px;
-      background: var(--surface);
-      box-shadow: var(--shadow);
-      backdrop-filter: blur(12px);
+
+      background:
+        var(--surface);
+
+      box-shadow:
+        var(--shadow);
+
+      backdrop-filter:
+        blur(12px);
     }
 
     .category-image-wrapper {
       position: relative;
+
       width: 100%;
       height: 250px;
+
       overflow: hidden;
-      background: linear-gradient(135deg, var(--dark-green), var(--dark-green-2));
+
+      background:
+        linear-gradient(
+          135deg,
+          var(--dark-green),
+          var(--dark-green-2)
+        );
     }
 
     .category-image {
       width: 100%;
       height: 100%;
+
       display: block;
+
       object-fit: cover;
     }
 
     .category-image-wrapper::after {
       content: "";
+
       position: absolute;
       inset: 0;
+
       background:
-        linear-gradient(to top, rgba(8, 33, 27, 0.82), rgba(8, 33, 27, 0.08) 72%),
-        linear-gradient(120deg, rgba(255,255,255,0.04), transparent 40%);
+        linear-gradient(
+          to top,
+          rgba(8, 33, 27, 0.82),
+          rgba(8, 33, 27, 0.08) 72%
+        );
+
       pointer-events: none;
     }
 
     .category-heading {
       position: absolute;
+
       z-index: 2;
+
       left: 30px;
       right: 30px;
       bottom: 24px;
+
       color: white;
     }
 
     .category-number {
       margin-bottom: 8px;
+
+      color:
+        rgba(255, 255, 255, 0.72);
+
       font-size: 11px;
       font-weight: 600;
+
       letter-spacing: 2px;
-      color: rgba(255,255,255,0.72);
     }
 
     .category-title {
       margin: 0;
+
       font-size: 32px;
+
       font-weight: 700;
+
       line-height: 1.14;
+
       letter-spacing: -1px;
-      text-shadow: 0 2px 10px rgba(0,0,0,0.24);
+
+      text-shadow:
+        0 2px 10px
+        rgba(0, 0, 0, 0.24);
     }
 
     .category-no-image {
       padding: 30px;
-      background:
-        radial-gradient(circle at top right, rgba(232, 217, 182, 0.18), transparent 40%),
-        linear-gradient(135deg, var(--dark-green), var(--dark-green-2));
+
       color: white;
+
+      background:
+        radial-gradient(
+          circle at top right,
+          rgba(232, 217, 182, 0.18),
+          transparent 40%
+        ),
+        linear-gradient(
+          135deg,
+          var(--dark-green),
+          var(--dark-green-2)
+        );
     }
 
-    .category-no-image .category-title {
+    .category-no-image
+    .category-title {
       color: white;
     }
 
     .services {
-      padding: 10px 30px;
+      padding:
+        10px
+        30px;
     }
 
     .service {
-      padding: 24px 0;
-      border-bottom: 1px solid var(--line);
+      padding:
+        24px 0;
+
+      border-bottom:
+        1px solid
+        var(--line);
     }
 
     .service:last-child {
@@ -294,8 +465,13 @@
 
     .service-header {
       display: grid;
-      grid-template-columns: minmax(0, 1fr) auto;
+
+      grid-template-columns:
+        minmax(0, 1fr)
+        auto;
+
       gap: 24px;
+
       align-items: start;
     }
 
@@ -305,47 +481,81 @@
 
     .service-name {
       font-size: 21px;
+
       font-weight: 700;
+
       line-height: 1.35;
-      color: var(--text);
+
+      color:
+        var(--text);
+
       letter-spacing: -0.3px;
-      word-break: break-word;
+
+      white-space: normal;
+
+      overflow-wrap: break-word;
+
+      word-break: normal;
     }
 
     .service-note {
       margin-top: 7px;
+
       max-width: 500px;
-      color: var(--muted);
+
+      color:
+        var(--muted);
+
       font-size: 15px;
+
       line-height: 1.62;
     }
 
     .service-price {
       padding-top: 1px;
+
+      color:
+        var(--text);
+
       font-size: 16px;
+
       font-weight: 700;
+
       line-height: 1.45;
+
       text-align: right;
-      color: var(--text);
+
       white-space: nowrap;
     }
 
     .service-price::after {
       content: " —";
+
       margin-left: 6px;
-      color: var(--gold);
+
+      color:
+        var(--gold);
     }
 
     .service-details {
       margin-top: 18px;
+
       padding-top: 17px;
-      border-top: 1px solid var(--line);
+
+      border-top:
+        1px solid
+        var(--line);
     }
 
     .detail-item {
       display: grid;
-      grid-template-columns: 10px minmax(0, 1fr);
+
+      grid-template-columns:
+        10px
+        minmax(0, 1fr);
+
       gap: 12px;
+
       margin-bottom: 16px;
     }
 
@@ -355,55 +565,95 @@
 
     .detail-dot {
       padding-top: 2px;
-      color: var(--gold);
+
+      color:
+        var(--gold);
+
       font-size: 17px;
+
       line-height: 1;
     }
 
     .detail-title {
       font-size: 16px;
+
       font-weight: 700;
+
       line-height: 1.45;
-      color: var(--text);
+
+      color:
+        var(--text);
+
       word-break: break-word;
     }
 
     .detail-description {
       margin-top: 4px;
+
       max-width: 520px;
-      color: var(--muted);
+
+      color:
+        var(--muted);
+
       font-size: 14px;
+
       line-height: 1.6;
     }
 
     .addon-section {
       margin-top: 20px;
-      padding: 18px 0 4px 16px;
-      border-left: 2px solid var(--gold);
-      background: linear-gradient(
-        90deg,
-        rgba(232, 217, 182, 0.22),
-        rgba(232, 217, 182, 0.07),
-        transparent
-      );
+
+      padding:
+        18px
+        0
+        4px
+        16px;
+
+      border-left:
+        2px solid
+        var(--gold);
+
+      background:
+        linear-gradient(
+          90deg,
+          rgba(232, 217, 182, 0.22),
+          rgba(232, 217, 182, 0.07),
+          transparent
+        );
     }
 
     .addon-label {
       margin-bottom: 12px;
+
+      color:
+        var(--gold);
+
       font-size: 13px;
+
       font-weight: 700;
+
       letter-spacing: 2px;
+
       text-transform: uppercase;
-      color: var(--gold);
     }
 
     .addon-item {
       display: grid;
-      grid-template-columns: minmax(0, 1fr) auto;
+
+      grid-template-columns:
+        minmax(0, 1fr)
+        auto;
+
       gap: 24px;
+
       align-items: start;
-      padding: 13px 0;
-      border-bottom: 1px solid var(--line);
+
+      padding:
+        13px 0;
+
+      border-bottom:
+        1px solid
+        var(--line);
     }
 
     .addon-item:last-child {
@@ -416,173 +666,311 @@
 
     .addon-title {
       font-size: 15px;
+
       font-weight: 700;
+
       line-height: 1.45;
-      color: var(--text);
-      word-break: break-word;
+
+      color:
+        var(--text);
+
+      white-space: normal;
+
+      overflow-wrap: break-word;
+
+      word-break: normal;
     }
 
     .addon-description {
       margin-top: 4px;
+
       max-width: 480px;
-      color: var(--muted);
+
+      color:
+        var(--muted);
+
       font-size: 14px;
+
       line-height: 1.6;
     }
 
     .addon-price {
       padding-top: 1px;
+
+      color:
+        var(--text);
+
       font-size: 16px;
+
       font-weight: 700;
+
       line-height: 1.45;
+
       text-align: right;
-      color: var(--text);
+
       white-space: nowrap;
     }
 
     .addon-price::after {
       content: " —";
+
       margin-left: 6px;
-      color: var(--gold);
+
+      color:
+        var(--gold);
     }
 
     .loading {
-      padding: 65px 20px;
+      padding:
+        65px
+        20px;
+
       text-align: center;
-      color: var(--muted);
+
+      color:
+        var(--muted);
+
       font-size: 16px;
     }
 
     .loader {
       width: 40px;
       height: 40px;
-      margin: 0 auto 16px;
-      border: 2px solid rgba(184, 146, 83, 0.22);
-      border-top-color: var(--gold);
+
+      margin:
+        0 auto
+        16px;
+
+      border:
+        2px solid
+        rgba(184, 146, 83, 0.22);
+
+      border-top-color:
+        var(--gold);
+
       border-radius: 50%;
-      animation: spin 0.8s linear infinite;
+
+      animation:
+        spin 0.8s
+        linear infinite;
     }
 
     @keyframes spin {
       to {
-        transform: rotate(360deg);
+        transform:
+          rotate(360deg);
       }
     }
 
     .error {
       padding: 22px;
-      border: 1px solid rgba(168, 87, 87, 0.20);
+
+      border:
+        1px solid
+        rgba(168, 87, 87, 0.20);
+
       border-radius: 4px;
-      background: rgba(255, 241, 241, 0.82);
-      color: #7c4f4f;
+
+      background:
+        rgba(255, 241, 241, 0.82);
+
+      color:
+        #7c4f4f;
+
       font-size: 16px;
+
       line-height: 1.65;
     }
 
     footer {
       margin-top: 60px;
+
       padding: 30px;
+
       border-radius: 6px;
-      border: 1px solid rgba(24,49,43,0.08);
+
+      border:
+        1px solid
+        rgba(24, 49, 43, 0.08);
+
       background:
-        linear-gradient(135deg, rgba(20, 63, 54, 0.97), rgba(24, 74, 64, 0.96)),
-        radial-gradient(circle at top right, rgba(232, 217, 182, 0.15), transparent 35%);
+        linear-gradient(
+          135deg,
+          rgba(20, 63, 54, 0.97),
+          rgba(24, 74, 64, 0.96)
+        );
+
       color: white;
-      box-shadow: var(--shadow);
+
+      box-shadow:
+        var(--shadow);
     }
 
     .footer-brand {
       margin-bottom: 18px;
+
       font-size: 28px;
+
       font-weight: 700;
+
       letter-spacing: -1px;
     }
 
     .footer-label {
       display: flex;
       align-items: center;
+
       gap: 9px;
+
       margin-bottom: 16px;
-      color: rgba(255,255,255,0.64);
+
+      color:
+        rgba(255, 255, 255, 0.64);
+
       font-size: 11px;
+
       font-weight: 700;
+
       letter-spacing: 1.8px;
+
       text-transform: uppercase;
     }
 
     .footer-label::before {
       content: "";
+
       width: 24px;
       height: 2px;
-      background: var(--gold);
+
+      background:
+        var(--gold);
     }
 
     .footer-address-grid {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
+
+      grid-template-columns:
+        repeat(
+          2,
+          minmax(0, 1fr)
+        );
+
       gap: 28px;
     }
 
     .footer-location {
-      color: rgba(255,255,255,0.76);
+      color:
+        rgba(255, 255, 255, 0.76);
+
       font-size: 14px;
+
       line-height: 1.7;
     }
 
     .footer-location strong {
       display: block;
+
       margin-bottom: 6px;
-      font-size: 15px;
-      font-weight: 700;
+
       color: white;
+
+      font-size: 15px;
+
+      font-weight: 700;
     }
 
     .footer-note {
       margin-top: 26px;
+
       padding-top: 17px;
-      border-top: 1px solid rgba(255,255,255,0.12);
-      color: rgba(255,255,255,0.60);
+
+      border-top:
+        1px solid
+        rgba(255, 255, 255, 0.12);
+
+      color:
+        rgba(255, 255, 255, 0.60);
+
       font-size: 13px;
+
       line-height: 1.7;
     }
 
-    @media (max-width: 768px) {
+    @media
+    (max-width: 768px) {
+
       body {
         background:
-          radial-gradient(circle at 18% 10%, rgba(176, 210, 198, 0.62), transparent 28%),
-          radial-gradient(circle at 88% 12%, rgba(232, 217, 182, 0.58), transparent 25%),
-          radial-gradient(circle at 18% 90%, rgba(221, 182, 174, 0.42), transparent 26%),
-          radial-gradient(circle at 88% 75%, rgba(176, 210, 198, 0.32), transparent 24%),
-          linear-gradient(180deg, #f6f2ea 0%, #f0ebe1 48%, #ece5d8 100%);
+          radial-gradient(
+            circle at 15% 8%,
+            rgba(176, 210, 198, 0.68),
+            transparent 30%
+          ),
+          radial-gradient(
+            circle at 90% 16%,
+            rgba(232, 217, 182, 0.64),
+            transparent 27%
+          ),
+          radial-gradient(
+            circle at 18% 88%,
+            rgba(221, 182, 174, 0.46),
+            transparent 28%
+          ),
+          radial-gradient(
+            circle at 86% 68%,
+            rgba(176, 210, 198, 0.38),
+            transparent 26%
+          ),
+          linear-gradient(
+            180deg,
+            #f6f2ea 0%,
+            #f0ebe1 48%,
+            #ece5d8 100%
+          );
       }
 
       .bg-blob-1 {
         width: 360px;
         height: 360px;
+
         top: -80px;
         right: -120px;
-        filter: blur(85px);
+
+        filter:
+          blur(80px);
       }
 
       .bg-blob-2 {
         width: 300px;
         height: 300px;
+
         top: 48%;
         right: -140px;
-        filter: blur(85px);
+
+        filter:
+          blur(80px);
       }
 
       .bg-blob-3 {
         width: 310px;
         height: 310px;
+
         left: -120px;
         bottom: -90px;
-        filter: blur(85px);
+
+        filter:
+          blur(80px);
       }
 
       .page {
-        width: calc(100% - 22px);
-        padding: 34px 0 46px;
+        width:
+          calc(
+            100% - 22px
+          );
+
+        padding:
+          34px 0
+          46px;
       }
 
       .brand {
@@ -591,22 +979,29 @@
 
       .brand-top {
         font-size: 9px;
-        letter-spacing: 1.9px;
+
+        letter-spacing:
+          1.9px;
       }
 
       .brand h1 {
         font-size: 48px;
-        letter-spacing: -2px;
+
+        letter-spacing:
+          -2px;
       }
 
       .brand-description {
-        font-size: 15px;
         max-width: 360px;
+
+        font-size: 15px;
+
         line-height: 1.65;
       }
 
       .intro {
         display: block;
+
         margin-bottom: 24px;
       }
 
@@ -616,8 +1011,11 @@
 
       .intro-text {
         max-width: 100%;
+
         margin-top: 12px;
+
         text-align: left;
+
         font-size: 14px;
       }
 
@@ -641,54 +1039,97 @@
 
       .category-title {
         font-size: 24px;
+
         line-height: 1.16;
       }
 
       .category-no-image {
-        padding: 22px 18px;
+        padding:
+          22px
+          18px;
       }
 
       .services {
-        padding: 6px 18px;
+        padding:
+          6px
+          18px;
       }
 
       .service {
-        padding: 19px 0;
+        padding:
+          19px 0;
       }
 
+      /*
+      ===================================
+      MOBILE LAYOUT
+      ===================================
+
+      Harga TETAP di kanan.
+      Nama layanan yang wrap.
+      */
+
       .service-header {
-        grid-template-columns: 1fr;
-        gap: 8px;
+        display: grid;
+
+        grid-template-columns:
+          minmax(0, 1fr)
+          148px;
+
+        gap: 12px;
+
+        align-items: start;
+      }
+
+      .service-main {
+        min-width: 0;
       }
 
       .service-name {
         font-size: 18px;
-        line-height: 1.4;
+
+        line-height: 1.38;
+
+        white-space: normal;
+
+        overflow-wrap: break-word;
+
+        word-break: normal;
       }
 
       .service-note {
         font-size: 14px;
+
         line-height: 1.58;
       }
 
       .service-price {
         font-size: 15px;
-        text-align: left;
-        padding-top: 0;
+
+        text-align: right;
+
+        white-space: nowrap;
+
+        padding-top: 1px;
       }
 
       .service-price::after {
-        display: none;
+        display: inline;
       }
 
       .service-details {
         margin-top: 14px;
+
         padding-top: 14px;
       }
 
       .detail-item {
-        grid-template-columns: 10px minmax(0, 1fr);
+        grid-template-columns:
+          10px
+          minmax(0, 1fr);
+
         gap: 10px;
+
         margin-bottom: 14px;
       }
 
@@ -698,47 +1139,83 @@
 
       .detail-description {
         font-size: 13px;
+
         line-height: 1.58;
       }
 
       .addon-section {
         margin-top: 16px;
-        padding: 14px 0 2px 12px;
+
+        padding:
+          14px
+          0
+          2px
+          12px;
       }
 
       .addon-label {
         font-size: 12px;
+
         margin-bottom: 10px;
       }
 
       .addon-item {
-        grid-template-columns: 1fr;
-        gap: 7px;
-        padding: 12px 0;
+        display: grid;
+
+        grid-template-columns:
+          minmax(0, 1fr)
+          148px;
+
+        gap: 12px;
+
+        align-items: start;
+
+        padding:
+          12px 0;
+      }
+
+      .addon-info {
+        min-width: 0;
       }
 
       .addon-title {
         font-size: 14px;
+
+        line-height: 1.45;
+
+        white-space: normal;
+
+        overflow-wrap: break-word;
+
+        word-break: normal;
       }
 
       .addon-description {
         font-size: 13px;
+
         line-height: 1.58;
       }
 
       .addon-price {
         font-size: 15px;
-        text-align: left;
-        padding-top: 0;
+
+        text-align: right;
+
+        white-space: nowrap;
+
+        padding-top: 1px;
       }
 
       .addon-price::after {
-        display: none;
+        display: inline;
       }
 
       footer {
         margin-top: 42px;
-        padding: 24px 18px;
+
+        padding:
+          24px
+          18px;
       }
 
       .footer-brand {
@@ -746,7 +1223,9 @@
       }
 
       .footer-address-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns:
+          1fr;
+
         gap: 18px;
       }
 
@@ -762,6 +1241,32 @@
         font-size: 12px;
       }
     }
+
+    @media
+    (max-width: 430px) {
+
+      .service-header {
+        grid-template-columns:
+          minmax(0, 1fr)
+          140px;
+      }
+
+      .addon-item {
+        grid-template-columns:
+          minmax(0, 1fr)
+          140px;
+      }
+
+      .service-name {
+        font-size: 17px;
+      }
+
+      .service-price,
+      .addon-price {
+        font-size: 14px;
+      }
+    }
+
   </style>
 </head>
 
@@ -774,23 +1279,35 @@
   <main class="page">
 
     <header class="brand">
+
       <div class="brand-top">
         Hair & Skin Care · Bekasi
       </div>
 
-      <h1>Eva Salon</h1>
+      <h1>
+        Eva Salon
+      </h1>
 
       <p class="brand-description">
         Daftar perawatan rambut dan kecantikan
         Eva Salon. Pilih treatment yang sesuai
         dengan kebutuhan Anda.
       </p>
+
     </header>
 
     <section class="intro">
+
       <div>
-        <div class="intro-label">Price List</div>
-        <h2>Layanan Kami</h2>
+
+        <div class="intro-label">
+          Price List
+        </div>
+
+        <h2>
+          Layanan Kami
+        </h2>
+
       </div>
 
       <p class="intro-text">
@@ -798,307 +1315,806 @@
         menyesuaikan kebutuhan dan
         kondisi rambut.
       </p>
+
     </section>
 
     <div id="content">
+
       <div class="loading">
+
         <div class="loader"></div>
+
         Memuat daftar layanan...
+
       </div>
+
     </div>
 
     <footer>
-      <div class="footer-brand">Eva Salon</div>
 
-      <div class="footer-label">Lokasi Kami</div>
+      <div class="footer-brand">
+        Eva Salon
+      </div>
+
+      <div class="footer-label">
+        Lokasi Kami
+      </div>
 
       <div class="footer-address-grid">
+
         <div class="footer-location">
-          <strong>Pusat · Bekasi Timur</strong>
+
+          <strong>
+            Pusat · Bekasi Timur
+          </strong>
+
           Jl. Nusantara Raya No. 3 & 4,
           Perumnas 3, Bekasi Timur
+
         </div>
 
         <div class="footer-location">
-          <strong>Cabang · Bekasi Utara</strong>
+
+          <strong>
+            Cabang · Bekasi Utara
+          </strong>
+
           Perum Candrabaga Raya Blok AQ No. 8,
-          Pondok Ungu Permai, Bekasi Utara
+          Pondok Ungu Permai,
+          Bekasi Utara
+
         </div>
+
       </div>
 
       <div class="footer-note">
+
         Harga dapat berubah sewaktu-waktu.
+
         <br>
+
         Silakan konfirmasi kepada Eva Salon
         untuk informasi terbaru.
+
       </div>
+
     </footer>
 
   </main>
 
   <script>
+
     const API_URL =
       'https://script.google.com/macros/s/AKfycbwRcpPFRXnySce9fhF7-FZEzJ85PuA6jiGU0SOmYIP8a12PR1XGUylHLuGGdhq3GrPF/exec';
 
+
     function formatPrice(price) {
-      if (price === null || price === undefined) {
+
+      if (
+        price === null ||
+        price === undefined
+      ) {
         return '';
       }
 
-      let value = String(price).trim();
+
+      let value =
+        String(price)
+          .trim();
+
 
       if (!value) {
         return '';
       }
 
-      if (/^rp[\s.]?/i.test(value)) {
+
+      if (
+        /^rp[\s.]?/i.test(value)
+      ) {
         return value;
       }
 
-      if (/^\d+$/.test(value)) {
-        const formatted = new Intl.NumberFormat('id-ID')
-          .format(Number(value));
 
-        return 'Rp ' + formatted;
+      if (
+        /^\d+$/.test(value)
+      ) {
+
+        const formatted =
+          new Intl.NumberFormat(
+            'id-ID'
+          )
+          .format(
+            Number(value)
+          );
+
+
+        return (
+          'Rp ' +
+          formatted
+        );
+
       }
 
-      const range = value.match(/^(\d+)\s*[-–—]\s*(\d+)$/);
+
+      const range =
+        value.match(
+          /^(\d+)\s*[-–—]\s*(\d+)$/
+        );
+
 
       if (range) {
-        const min = new Intl.NumberFormat('id-ID')
-          .format(Number(range[1]));
 
-        const max = new Intl.NumberFormat('id-ID')
-          .format(Number(range[2]));
+        const min =
+          new Intl.NumberFormat(
+            'id-ID'
+          )
+          .format(
+            Number(
+              range[1]
+            )
+          );
 
-        return 'Rp ' + min + ' - ' + max;
+
+        const max =
+          new Intl.NumberFormat(
+            'id-ID'
+          )
+          .format(
+            Number(
+              range[2]
+            )
+          );
+
+
+        return (
+          'Rp ' +
+          min +
+          ' - ' +
+          max
+        );
+
       }
 
-      return 'Rp ' + value;
+
+      return (
+        'Rp ' +
+        value
+      );
+
     }
 
+
     function escapeHTML(value) {
-      const div = document.createElement('div');
+
+      const div =
+        document.createElement(
+          'div'
+        );
+
+
       div.textContent =
-        value === null || value === undefined
+        value === null ||
+        value === undefined
           ? ''
           : String(value);
 
+
       return div.innerHTML;
+
     }
 
+
     function loadEvaSalonData(response) {
-      if (!response || response.success !== true) {
+
+      if (
+        !response ||
+        response.success !== true
+      ) {
+
         showError(
-          response && response.message
+          response &&
+          response.message
             ? response.message
             : 'Data tidak tersedia.'
         );
+
         return;
+
       }
 
-      renderPriceList(response.data);
+
+      renderPriceList(
+        response.data
+      );
+
     }
+
 
     function renderPriceList(categories) {
-      const container = document.getElementById('content');
 
-      if (!categories || categories.length === 0) {
+      const container =
+        document.getElementById(
+          'content'
+        );
+
+
+      if (
+        !categories ||
+        categories.length === 0
+      ) {
+
         container.innerHTML = `
+
           <div class="error">
+
             Belum ada layanan yang tersedia.
+
           </div>
+
         `;
+
         return;
+
       }
 
-      let html = '';
 
-      categories.forEach((category, categoryIndex) => {
-        html += `<section class="category">`;
+      let html =
+        '';
 
-        if (category.image) {
+
+      categories.forEach(
+        (
+          category,
+          categoryIndex
+        ) => {
+
+
           html += `
-            <div class="category-image-wrapper">
-              <img
-                class="category-image"
-                src="${escapeHTML(category.image)}"
-                alt="${escapeHTML(category.name)}"
-                loading="lazy"
+
+            <section class="category">
+
+          `;
+
+
+          if (category.image) {
+
+            html += `
+
+              <div
+                class="category-image-wrapper"
               >
 
-              <div class="category-heading">
-                <div class="category-number">
-                  ${String(categoryIndex + 1).padStart(2, '0')}
-                </div>
+                <img
 
-                <h3 class="category-title">
-                  ${escapeHTML(category.name)}
-                </h3>
-              </div>
-            </div>
-          `;
-        } else {
-          html += `
-            <div class="category-no-image">
-              <div class="category-number">
-                ${String(categoryIndex + 1).padStart(2, '0')}
-              </div>
+                  class="category-image"
 
-              <h3 class="category-title">
-                ${escapeHTML(category.name)}
-              </h3>
-            </div>
-          `;
-        }
+                  src="${
+                    escapeHTML(
+                      category.image
+                    )
+                  }"
 
-        html += `<div class="services">`;
+                  alt="${
+                    escapeHTML(
+                      category.name
+                    )
+                  }"
 
-        category.services.forEach(service => {
-          const details = Array.isArray(service.details)
-            ? service.details
-            : [];
+                  loading="lazy"
 
-          const features = details.filter(
-            item =>
-              String(item.type || '')
-                .toLowerCase() !== 'addon'
-          );
+                >
 
-          const addons = details.filter(
-            item =>
-              String(item.type || '')
-                .toLowerCase() === 'addon'
-          );
 
-          html += `
-            <article class="service">
+                <div
+                  class="category-heading"
+                >
 
-              <div class="service-header">
-                <div class="service-main">
-                  <div class="service-name">
-                    ${escapeHTML(service.service)}
+
+                  <div
+                    class="category-number"
+                  >
+
+                    ${
+                      String(
+                        categoryIndex + 1
+                      )
+                      .padStart(
+                        2,
+                        '0'
+                      )
+                    }
+
                   </div>
 
-                  ${
-                    service.note
-                      ? `
-                        <div class="service-note">
-                          ${escapeHTML(service.note)}
-                        </div>
-                      `
-                      : ''
-                  }
+
+                  <h3
+                    class="category-title"
+                  >
+
+                    ${
+                      escapeHTML(
+                        category.name
+                      )
+                    }
+
+                  </h3>
+
+
                 </div>
 
-                ${
-                  service.price
-                    ? `
-                      <div class="service-price">
-                        ${escapeHTML(formatPrice(service.price))}
-                      </div>
-                    `
-                    : ''
-                }
+
               </div>
 
-              ${
-                features.length > 0
-                  ? `
-                    <div class="service-details">
-                      ${
-                        features.map(item => `
-                          <div class="detail-item">
-                            <div class="detail-dot">•</div>
+            `;
 
-                            <div>
-                              <div class="detail-title">
-                                ${escapeHTML(item.title)}
-                              </div>
+          }
+
+          else {
+
+            html += `
+
+              <div
+                class="category-no-image"
+              >
+
+
+                <div
+                  class="category-number"
+                >
+
+                  ${
+                    String(
+                      categoryIndex + 1
+                    )
+                    .padStart(
+                      2,
+                      '0'
+                    )
+                  }
+
+                </div>
+
+
+                <h3
+                  class="category-title"
+                >
+
+                  ${
+                    escapeHTML(
+                      category.name
+                    )
+                  }
+
+                </h3>
+
+
+              </div>
+
+            `;
+
+          }
+
+
+          html += `
+
+            <div class="services">
+
+          `;
+
+
+          category.services
+            .forEach(
+              service => {
+
+
+                const details =
+                  Array.isArray(
+                    service.details
+                  )
+                    ? service.details
+                    : [];
+
+
+                const features =
+                  details.filter(
+                    item =>
+                      String(
+                        item.type || ''
+                      )
+                      .toLowerCase() !==
+                      'addon'
+                  );
+
+
+                const addons =
+                  details.filter(
+                    item =>
+                      String(
+                        item.type || ''
+                      )
+                      .toLowerCase() ===
+                      'addon'
+                  );
+
+
+                html += `
+
+                  <article class="service">
+
+
+                    <div
+                      class="service-header"
+                    >
+
+
+                      <div
+                        class="service-main"
+                      >
+
+
+                        <div
+                          class="service-name"
+                        >
+
+                          ${
+                            escapeHTML(
+                              service.service
+                            )
+                          }
+
+                        </div>
+
+
+                        ${
+                          service.note
+
+                          ?
+
+                          `
+
+                            <div
+                              class="service-note"
+                            >
 
                               ${
-                                item.description
-                                  ? `
-                                    <div class="detail-description">
-                                      ${escapeHTML(item.description)}
-                                    </div>
-                                  `
-                                  : ''
+                                escapeHTML(
+                                  service.note
+                                )
                               }
-                            </div>
-                          </div>
-                        `).join('')
-                      }
-                    </div>
-                  `
-                  : ''
-              }
 
-              ${
-                addons.length > 0
-                  ? `
-                    <div class="addon-section">
-                      <div class="addon-label">Add-on</div>
+                            </div>
+
+                          `
+
+                          :
+
+                          ''
+                        }
+
+
+                      </div>
+
 
                       ${
-                        addons.map(item => `
-                          <div class="addon-item">
-                            <div class="addon-info">
-                              <div class="addon-title">
-                                + ${escapeHTML(item.title)}
-                              </div>
+                        service.price
 
-                              ${
-                                item.description
-                                  ? `
-                                    <div class="addon-description">
-                                      ${escapeHTML(item.description)}
-                                    </div>
-                                  `
-                                  : ''
-                              }
-                            </div>
+                        ?
+
+                        `
+
+                          <div
+                            class="service-price"
+                          >
 
                             ${
-                              item.price
-                                ? `
-                                  <div class="addon-price">
-                                    ${escapeHTML(formatPrice(item.price))}
-                                  </div>
-                                `
-                                : ''
+                              escapeHTML(
+                                formatPrice(
+                                  service.price
+                                )
+                              )
                             }
+
                           </div>
-                        `).join('')
+
+                        `
+
+                        :
+
+                        ''
                       }
+
+
                     </div>
-                  `
-                  : ''
+
+
+                    ${
+                      features.length > 0
+
+                      ?
+
+                      `
+
+                        <div
+                          class="service-details"
+                        >
+
+
+                          ${
+                            features
+                              .map(
+                                item => `
+
+                                  <div
+                                    class="detail-item"
+                                  >
+
+
+                                    <div
+                                      class="detail-dot"
+                                    >
+                                      •
+                                    </div>
+
+
+                                    <div>
+
+
+                                      <div
+                                        class="detail-title"
+                                      >
+
+                                        ${
+                                          escapeHTML(
+                                            item.title
+                                          )
+                                        }
+
+                                      </div>
+
+
+                                      ${
+                                        item.description
+
+                                        ?
+
+                                        `
+
+                                          <div
+                                            class="detail-description"
+                                          >
+
+                                            ${
+                                              escapeHTML(
+                                                item.description
+                                              )
+                                            }
+
+                                          </div>
+
+                                        `
+
+                                        :
+
+                                        ''
+                                      }
+
+
+                                    </div>
+
+
+                                  </div>
+
+                                `
+                              )
+                              .join('')
+                          }
+
+
+                        </div>
+
+                      `
+
+                      :
+
+                      ''
+                    }
+
+
+                    ${
+                      addons.length > 0
+
+                      ?
+
+                      `
+
+                        <div
+                          class="addon-section"
+                        >
+
+
+                          <div
+                            class="addon-label"
+                          >
+
+                            Add-on
+
+                          </div>
+
+
+                          ${
+                            addons
+                              .map(
+                                item => `
+
+                                  <div
+                                    class="addon-item"
+                                  >
+
+
+                                    <div
+                                      class="addon-info"
+                                    >
+
+
+                                      <div
+                                        class="addon-title"
+                                      >
+
+                                        + ${
+                                          escapeHTML(
+                                            item.title
+                                          )
+                                        }
+
+                                      </div>
+
+
+                                      ${
+                                        item.description
+
+                                        ?
+
+                                        `
+
+                                          <div
+                                            class="addon-description"
+                                          >
+
+                                            ${
+                                              escapeHTML(
+                                                item.description
+                                              )
+                                            }
+
+                                          </div>
+
+                                        `
+
+                                        :
+
+                                        ''
+                                      }
+
+
+                                    </div>
+
+
+                                    ${
+                                      item.price
+
+                                      ?
+
+                                      `
+
+                                        <div
+                                          class="addon-price"
+                                        >
+
+                                          ${
+                                            escapeHTML(
+                                              formatPrice(
+                                                item.price
+                                              )
+                                            )
+                                          }
+
+                                        </div>
+
+                                      `
+
+                                      :
+
+                                      ''
+                                    }
+
+
+                                  </div>
+
+                                `
+                              )
+                              .join('')
+                          }
+
+
+                        </div>
+
+                      `
+
+                      :
+
+                      ''
+                    }
+
+
+                  </article>
+
+                `;
+
+
               }
+            );
 
-            </article>
+
+          html += `
+
+              </div>
+
+            </section>
+
           `;
-        });
 
-        html += `</div></section>`;
-      });
 
-      container.innerHTML = html;
+        }
+      );
+
+
+      container.innerHTML =
+        html;
+
     }
+
 
     function showError(message) {
-      document.getElementById('content').innerHTML = `
-        <div class="error">
-          Price list gagal dimuat.
-          <br><br>
-          ${escapeHTML(message || 'Silakan coba kembali.')}
-        </div>
-      `;
+
+      document
+        .getElementById(
+          'content'
+        )
+        .innerHTML = `
+
+          <div class="error">
+
+            Price list gagal dimuat.
+
+            <br><br>
+
+            ${
+              escapeHTML(
+                message ||
+                'Silakan coba kembali.'
+              )
+            }
+
+          </div>
+
+        `;
+
     }
 
+
     function loadData() {
-      const script = document.createElement('script');
-      const separator = API_URL.includes('?') ? '&' : '?';
+
+      const script =
+        document.createElement(
+          'script'
+        );
+
+
+      const separator =
+        API_URL.includes('?')
+          ? '&'
+          : '?';
+
 
       script.src =
         API_URL +
@@ -1107,15 +2123,34 @@
         '&t=' +
         Date.now();
 
-      script.onerror = function () {
-        showError('Gagal terhubung ke Google Apps Script.');
-      };
 
-      document.body.appendChild(script);
+      script.onerror =
+        function () {
+
+          showError(
+            'Gagal terhubung ke Google Apps Script.'
+          );
+
+        };
+
+
+      document.body
+        .appendChild(
+          script
+        );
+
     }
 
-    window.loadEvaSalonData = loadEvaSalonData;
-    window.addEventListener('DOMContentLoaded', loadData);
+
+    window.loadEvaSalonData =
+      loadEvaSalonData;
+
+
+    window.addEventListener(
+      'DOMContentLoaded',
+      loadData
+    );
+
   </script>
 
 </body>
